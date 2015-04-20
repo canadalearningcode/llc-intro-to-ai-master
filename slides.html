@@ -70,19 +70,22 @@
 
         <section class="slide" data-markdown>
             ##Customizing slides
-            For slide #1, if you do not know the wi-fi info in advance, just delete/comment out the `&lt;header&gt;` slide.
+
+            Slide #1: if you don't know the wi-fi info in advance, just delete/comment out the `&lt;header&gt;` slide.
 
             Put all workshop specific images in **framework/img/workshop**.
             
             All CSS for this template is written in Sass.  Avoid editing the core files (theme-llc.scss, _mixins.scss, _variable.scss).  Put all personal customizations in **framework/sass/workshop.scss**.  If you'd like to add an improvement or enhancement, please submit a pull request, open an issue or email [christina@ladieslearningcode.com](mailto:christina@ladieslearningcode.com).
 
-            To change the background image in slide #1 and slide #2, there are several images to choose from in **framework/img**. See **theme-llc.scss**, line 269 for more info.
+            To change the background image in slide #1 and slide #2, there are several images to choose from in **framework/img**. See **theme-llc.scss**, `.intro` CSS block to make the change.
 
             The progress bar at the top of the page can be defined by adding the presentation duration, in minutes, in the `data-duration` attribute on the `body` tag.  If you do not want to use it at all, leave the value empty.
 
-            Since most of the links included in the workshops are to external resources, all links open in a new window by default to allow learners to always have access to the slides.  Note that this feature is included using `&lt;base target="_blank"&gt;` added just after the opening `body` tag. (See more about the [`base`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base) tag.)
+            Since most of the links included in the workshops are to external resources, all links open in a new window by default to allow learners to always have access to the slides.  Note that this feature is included using `&lt;base target="_blank"&gt;` in the `head` tag.
 
             View the rest of the presentation for examples of styles included in the theme.  Many styles can be accomplished by adding a specific classes.
+
+            There is also support for using Markdown as well as including in-slide CSS examples.
         </section>
 
         <section class="slide title">
@@ -94,17 +97,53 @@
             <h2>Sub-heading example</h2>
         </section>
 
+
         <section class="slide" data-markdown>
+        <script type="text/template">
             ##Title slides
 
             For the previous two examples of Title slides, add a `title` class to `&lt;section&gt;` and use an `h1` tag for the main heading and `h2` for a subheading.
             
             ```xml
-            &lt;section class=&quot;slide title&quot;&gt;
-                &lt;h1&gt;Title Slide Example&lt;/h1&gt;
-                &lt;h2&gt;Sub-heading example&lt;/h2&gt;
-            &lt;/section&gt;
+            <section class="slide title">
+                <h1>Title Slide Example</h1>
+                <h2>Sub-heading example</h2>
+            </section>
             ```
+
+            <br>
+            Also, use the class of `.footnote` for links to extra resources or any other type of footnotes.
+
+            Footnote example here.  Some more text and a  <!-- .element: class="footnote" -->[link]().
+            </script>
+        </section>
+        <section class="slide">
+            <h2>Incremental display of content</h2>
+            <p>Use the arrow keys to reveal each line.  To use, just add a <code>class="delayed"</code>.</p>
+
+            <ul>
+                <li class="delayed">Make sure your computer is setup</li>
+                <li class="delayed">Web development breakdown</li>
+                <li class="delayed">Dive into HTML</li>
+                <li class="delayed">CSS fundamentals</li>
+            </ul>
+        </section>
+
+        <section class="slide centered" data-markdown>
+          ##Centered content
+
+          Add a class of `centered` to `&lt;section>`.
+
+          ![](http://cl.ly/image/14193Y1x1f2c/mic-drop.gif)
+        </section>
+
+        <section class="slide side-by-side" data-markdown>
+      ##Two images
+
+Add a class of `side-by-side` to `&lt;section>` to align two images.
+
+![](http://cl.ly/image/3c2y1v2A2o1q/Image%202015-01-29%20at%2011.55.36%20PM.png)
+![](http://cl.ly/image/3Z3U023P361J/Image%202015-01-30%20at%2012.37.27%20AM.png)
         </section>
 
         <section class="slide">
@@ -144,25 +183,45 @@ sayHello();
 }</code></pre>
         </section>
 
-            <section class="slide" data-markdown>
-##Markdown example
+        <section class="slide" data-markdown>
+##Markdown support
 
-Write in Markdown! Include the `data-markdown` attribute in the section tag. See the [documentation for markdown syntax](http://daringfireball.net/projects/markdown/).
+Markdown is a text-to-HTML conversion tool and allows you to write using plain text formatting.
 
-**If you need to use any HTML tags in the slide or add a class/id to an element, the entire slide has to be written in HTML and the markdown syntax will no longer work.**
+This slide deck supports automatic conversion from Markdown to HTML.
 
-Code blocks can be denoted either by three backticks (```) or by tabbing the content in one tab indent/4 spaces. However, using backticks is better for this slide presentation so you can specify a language for syntax highlighting.
+See the [markdown documentation](http://daringfireball.net/projects/markdown/) for formatting syntax.
 
-You can specify the language of the code block by following the three backticks immediately by the language name.  View the source to see this in action.
+Markdown support can be added in two ways. See the next two slides for more info.
+        </section>
 
-#### Javascript Example
+        <section class="slide" data-markdown>
+##Markdown: Option 1
+
+Include the `data-markdown` attribute in the section tag. 
+
+```xml
+&lt;section class="slide" data-markdown>
+    ##This is markdown!
+&lt;/section>
+```
+**If you need to use any HTML tags in the slide or add a class/id to an element, the entire slide has to be written in HTML and the markdown syntax will no longer be supported.  See option 2 for more info about mixing markdown and HTML.**
+
+Code blocks can be denoted either by three back ticks (```) **or** with one tab indent/4 spaces.  
+Using back ticks, immediately followed by the language, will allow you to specify a language for syntax highlighting.
+View the HTML source or see below for examples.
+
+
+#### Javascript Example: 
+
+\```javascript
 
 ```javascript
 var myJSVariable = "Syntax Highlighting for JavaScript";
 ```
 
 #### CSS Example
-
+\```css
 ```css
 .css-selector {
     property: value;
@@ -172,6 +231,7 @@ var myJSVariable = "Syntax Highlighting for JavaScript";
 #### HTML Example
 For HTML, set `xml` as the language to get nicer syntax highlighting.  Also, just like the `&lt;code&gt;` in the previous example, the left angled bracket of the HTML tag needs to be escaped. View source to see example.
 
+\```xml
 ```xml
 &lt;header>
     &lt;h1>I'm an H1!&lt;/h1>
@@ -182,6 +242,40 @@ For HTML, set `xml` as the language to get nicer syntax highlighting.  Also, jus
 #### indented example
 
     code block that has to guess at the language and likely gets it wrong.
+        </section>
+
+        <section class="slide">
+            <h2>Markdown: Option 2</h2>
+            <p>Add the <code>data-markdown</code> attribute to the <code>&lt;section&gt;</code> tag and wrap the content in a <code>&lt;script type="text/template"&gt;&lt;/script&gt;</code>. With this option, you can mix HTML markup (does not need to be escaped) with Markdown syntax though avoid using a &lt;script&gt; tag within the content wrapping script tag.</p>
+<pre><code>&lt;section class="slide" data-markdown&gt;
+    &lt;script type="text/template"&gt;
+        ## Heading2
+
+        A paragraph with some text and a [link](http://hakim.se).
+
+        &lt;p class="delayed">delayed text&lt;/p&gt;
+    &lt;/script&gt;
+&lt;/section&gt;
+</code></pre>
+        <p>You can also add an attribute like this:</p>
+
+<pre><code>Footnote text&lt;!-- .element: class="footnote" --&gt;
+</code></pre>
+
+<p>Will be converted to:</p>
+
+<pre><code>&lt;p class="footnote"&gt;Footnote text&lt;/p&gt;
+</code></pre>
+
+<p>Be sure to place the snippet before any nested elements.</p>
+
+<pre><code>Footnote text and &lt;!-- .element: class="footnote" --&gt; [link](http://website.com)
+</code></pre>
+
+<p>Will be converted to:</p>
+
+<pre><code>&lt;p class="footnote"&gt;A paragraph with some text and a &lt;a href="http://hakim.se"&gt;link&lt;/a&gt;.&lt;/p&gt;
+</code></pre>
         </section>
 
         <section class="slide" data-markdown>
@@ -200,34 +294,6 @@ For HTML, set `xml` as the language to get nicer syntax highlighting.  Also, jus
 
             LICEcap - simple animated screen captures  
             http://www.cockos.com/licecap/
-        </section>
-        <section class="slide">
-            <h2>Incremental display of content</h2>
-            <p>Use the arrow keys to reveal each line.  To use, just add a <code>class="delayed"</code>.</p>
-
-            <ul>
-                <li class="delayed">Make sure your computer is setup</li>
-                <li class="delayed">Web development breakdown</li>
-                <li class="delayed">Dive into HTML</li>
-                <li class="delayed">CSS fundamentals</li>
-            </ul>
-        </section>
-
-        <section class="slide centered" data-markdown>
-          ##Centered content
-
-          Add a class of `centered` to `&lt;section>`.
-
-          ![](http://cl.ly/image/14193Y1x1f2c/mic-drop.gif)
-        </section>
-
-        <section class="slide side-by-side" data-markdown>
-			##Two images
-
-Add a class of `side-by-side` to `&lt;section>` to align two images.
-
-![](http://cl.ly/image/3c2y1v2A2o1q/Image%202015-01-29%20at%2011.55.36%20PM.png)
-![](http://cl.ly/image/3Z3U023P361J/Image%202015-01-30%20at%2012.37.27%20AM.png)
         </section>
 
         <section class="slide">
@@ -274,8 +340,8 @@ padding: 20px;</textarea>
 
             You will need to register a domain name (www.mysite.com) and get hosting. Here are a couple domain & hosting suggestions:
             
-            * [hover.com](http://hover.com/ladiescode)
-            * [dreamhost.com](http://www.dreamhost.com/r.cgi?2085384) - Use coupon code **LLC40** to get $40 off your registration!
+            * [hover.com](http://hover.com/ladiescode) - Domain registration
+            * [dreamhost.com](http://www.dreamhost.com/r.cgi?2085384) - Domain and hosting - Use coupon code **LLC40** to get $40 off your registration!
 
             To get your files online, you will need upload your files to your newly purchased hosting server. There are a few pieces of information you will need and are usually provided to you by your hosting service provider.
 
@@ -283,8 +349,7 @@ padding: 20px;</textarea>
             * Username
             * Password
 
-            Here's a nice tutorial getting your files online using FileZilla: [FileZilla Client Tutorial](https://wiki.filezilla-project.org/FileZilla_Client_Tutorial_%28en%29)
-
+            Here's a nice tutorial getting your files online using FileZilla: [FileZilla Client Tutorial](https://wiki.filezilla-project.org/FileZilla_Client_Tutorial_%28en%29)  
             Feeling adventurous? Try [Hosting Static Sites on Github for Beginners](http://thephuse.com/development/hosting-static-sites-on-github-for-beginners/).
         </section>
 
