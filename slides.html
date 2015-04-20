@@ -246,7 +246,9 @@ For HTML, set `xml` as the language to get nicer syntax highlighting.  Also, jus
 
     <section class="slide">
       <h2>Markdown: Option 2</h2>
-      <p>Add the <code>data-markdown</code> attribute to the <code>&lt;section&gt;</code> tag and wrap the content in a <code>&lt;script type="text/template"&gt;&lt;/script&gt;</code>. With this option, you can mix HTML markup (does not need to be escaped) with Markdown syntax though avoid using a &lt;script&gt; tag within the content wrapping script tag.</p>
+      <p>Add the <code>data-markdown</code> attribute to the <code>&lt;section&gt;</code> tag and wrap the content in a <code>&lt;script type="text/template"&gt;&lt;/script&gt;</code>. With this option, you can mix HTML markup (does not need to be escaped) with Markdown syntax though avoid using any additional <code>&lt;script&gt;</code> tags within.</p>
+
+      <p>Also, using single or double quotes in the content may throw off the syntax highlighting in your editor, though the content will still be rendered properly in the browser.  You can use the HTML code instead.</p>
 <pre><code>&lt;section class="slide" data-markdown&gt;
   &lt;script type="text/template"&gt;
     ## Heading2
@@ -260,11 +262,6 @@ For HTML, set `xml` as the language to get nicer syntax highlighting.  Also, jus
     <p>You can also add an attribute like this:</p>
 
 <pre><code>Footnote text&lt;!-- .element: class="footnote" --&gt;
-</code></pre>
-
-<p>Will be converted to:</p>
-
-<pre><code>&lt;p class="footnote"&gt;Footnote text&lt;/p&gt;
 </code></pre>
 
 <p>Be sure to place the snippet before any nested elements.</p>
