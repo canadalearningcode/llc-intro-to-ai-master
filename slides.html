@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>Ladies Learning Code</title>
   <link rel="stylesheet" href="framework/css/slideshow.css" data-noprefix>
-  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700%7CQuicksand%7CPacifico%7COpen+Sans:400italic,400,300' rel='stylesheet' type='text/css' data-noprefix>
   <link rel="stylesheet" href="framework/css/fonts.css" data-noprefix>
   <link rel="stylesheet" href="framework/css/highlightjs/github.css" data-noprefix>
   <link rel="stylesheet" href="framework/css/styles.css" data-noprefix>
@@ -13,6 +12,7 @@
 
   <!-- Takes care of CSS3 prefixes -->
   <script src="framework/scripts/prefixfree.min.js"></script>
+  
   <!-- opens all links in a new window -->
   <base target="_blank">
 </head>
@@ -433,11 +433,6 @@
     </section>
 
   </main><!-- cls main section -->
-
-  <!-- <footer>
-    <p class="license"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" src="framework/img/cc-by-nc.svg" /></a> by <a prefix="cc: http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
-    <p class="instructions">Use the left <i class="fa fa-arrow-left"></i> and right <i class="fa fa-arrow-right"></i> arrow keys to navigate</p>
-  </footer> -->
   
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="framework/scripts/slideshow.js"></script>
@@ -452,7 +447,7 @@
   <script src="framework/scripts/plugins/markdown/markdown.js"></script>
   <script src="framework/scripts/plugins/highlight/highlight-8.4.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-
+  <script src="framework/scripts/llc.js"></script>
   <script>
     var slideshow = new SlideShow();
 
@@ -461,35 +456,6 @@
     for(var i=0; i<snippets.length; i++) {
       new CSSSnippet(snippets[i]);
     }
-
-    // Adds "edit me" note to editable code areas
-    jQuery(document).ready(function(){
-      jQuery(".snippet").before("<span class=\"edit\">edit me</span>");
-      
-      jQuery( "h3:contains('Resources'), h3:contains('Resource')" ).addClass("resources");
-      
-      // Table of Contents
-      var ToC = "<ul>";
-      var newLine, el, title, link;
-
-      jQuery("[data-toc] > h1").each(function() {
-        el = jQuery(this);
-        title = el.text();
-        link = "#" + el.parent().attr("id");
-
-        newLine =
-          "<li>" +
-            "<a href='" + link + "'>" +
-              title +
-            "</a>" +
-          "</li>";
-
-        ToC += newLine;
-      });
-      
-      ToC +="</ul>";
-      jQuery(".table-of-contents").append(ToC);
-    });
   </script>
 </body>
 </html>
