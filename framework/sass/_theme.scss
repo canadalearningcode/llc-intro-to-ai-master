@@ -78,6 +78,7 @@ a {
 hr {
   border: none;
   border-top: 1px solid $gray-light;
+  clear: both;
 }
 ul, ol {
   padding: 0;
@@ -90,6 +91,12 @@ ul, ol {
     font-size: $font-size-sm;
     width: 90%;
     margin: 5px 0 20px;
+  }
+  
+  .list-sm & {
+    font-size: $font-size-sm;
+    
+    li { margin-bottom: 4px; }
   }
 }
 
@@ -220,10 +227,14 @@ td {
 
 // Helper classes and content styles
 .note,
+.small-type .note,
 .resources,
 .resources + * {
-  line-height: 1.25;
+  line-height: 1.3;
   font-size: $font-size-xsm;
+}
+.resources,
+.resources + * {
   margin-top: 2px;
 }
 .left {
@@ -254,7 +265,12 @@ a.highlight {
     color: red;
   }
 }
-
+.small-type {
+  p, ul, ol {
+    font-size: $font-size-sm;
+    line-height: 1.3;
+  }
+}
 
 [class^="col-"],
 [class*="col-"]{
@@ -284,6 +300,10 @@ a.highlight {
 .slide {
   padding: 45px 64px;
   background-size: cover;
+  height: 100%;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
   
   // Adds extra space to the bottom of the slides to allow 
   // presenters to scroll the page up so people in the back
@@ -342,6 +362,7 @@ a.highlight {
   }
   h1 {
     margin-bottom: 0px;
+    line-height: 1.1;
   }
   h2 {
     color: $gray;
@@ -392,22 +413,24 @@ textarea.snippet {
 /* Creates border for slide examples */
 .example,
 blockquote {
-  border: 1px solid $gray-light;
   padding: 0 15px;
-  font-size: $font-size-sm;
-
+  font-size: $font-size-xsm;
+  
   p {
     margin: 10px 0;
   }
-
   &:last-child {
     margin-bottom: 50px;
   }
 }
+.example {
+  border: 1px solid $gray-light;
+  margin: 20px 0;
+}
 blockquote {
-  margin: 0;
-  font-size: $font-size-base - 4;
+  margin: 25px 0 20px;
   background: #fff;
+  border: 3px solid rgba(177, 9, 170, 0.2)
 }
 
 /* Incremental slides */
@@ -468,6 +491,12 @@ e.g.
   .instructions > ul {
     margin: 0 0 0 235px;
   }
+  ul.connected li {
+    margin-bottom: 0;
+  }
+  ul.downloads > li {
+    margin-bottom: 20px;
+  }
 }
 /* Instructor Info */
 .slide.intro, 
@@ -504,10 +533,13 @@ e.g.
     color: $white;
   }
   h1 {
-    margin-bottom: 95px;
+    margin-bottom: 10px;
   }
   a {
     color: white;
+  }
+  footer a {
+    color: $llc-pink;
   }
 }
 .slide.last {
@@ -541,7 +573,7 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background: rgba(white, 0.6);
+  background: white;
   font-size: $font-size-footnote;
     
   p {
@@ -564,9 +596,10 @@ footer {
 /* Table of contents
 ---------------------*/
 .table-of-contents {
+  font-size: $font-size-sm;
+  
   li {
-    width: 46%;
-    display: inline-block;
+    margin-bottom: 0;
   }
   a {
     color: $gray-dark;
