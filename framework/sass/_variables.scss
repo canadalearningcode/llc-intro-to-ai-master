@@ -26,12 +26,11 @@ $cursive:               $pacifico;
 // Fixed font sizes
 // No slide scaling based on window size as in reveal.js
 $font-size-base:        32px;
-$font-size-sm:          $font-size-base - 4;
+$font-size-sm:          $font-size-base - 3;
 $font-size-xsm:         $font-size-base - 10;
 $font-size-footnote:    $font-size-base - 16;
 $font-size-heading:     40px;
 $font-size-heading-lg:  75px;
-$font-size-heading-sm:  28px;
-$font-size-code:        20px;
+$font-size-heading-sm:  $font-size-base;
 $line-height:           1.4;
 

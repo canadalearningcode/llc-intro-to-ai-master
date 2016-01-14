@@ -67,8 +67,10 @@
     <section class="slide intro">
       <img class="logo" src="framework/img/llc-logo-white.png" alt="Ladies Learning Code logo">
       <h1 class="heading-bg">
-        <span>Title of Workshop</span><br>
-        <span>Second Line</span>
+        <span>
+          Title of Workshop<br>
+          Second Line
+        </span>
       </h1>
       
       <!-- FILL IN INSTRUCTOR DETAILS -->
@@ -85,7 +87,7 @@
       </div>
       <footer>
         <a class="left" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" src="framework/img/cc-by-nc.png" /></a>
-        <p class="left">by <a prefix="cc: http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
+        <p class="left">Content created by <a href="http://christinatruong.com">Christina Truong</a> for <a prefix="cc: http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
         <p class="right">Use the left <span class="arrow">&#8592;</span> and right <span class="arrow">&#8594;</span> arrow keys to navigate</p>
       </footer>
     </section>
@@ -96,7 +98,7 @@
 
       Put all workshop specific images in `framework/img/workshop`.
       
-      All CSS is written in [Sass](http://sass-lang.com/).  Avoid editing the core files.  Put all customizations in `framework/sass/_workshop.scss`.  If you'd like to add an improvement or enhancement, please submit a pull request, open an issue or email [christina@ladieslearningcode.com](mailto:christina@ladieslearningcode.com).
+      All CSS is written in [Sass](http://sass-lang.com/).  Put all specific workshop customizations in `framework/sass/_workshop.scss`.  If you'd like to add an improvement or enhancement, please submit a pull request, open an issue or email [christina@ladieslearningcode.com](mailto:christina@ladieslearningcode.com).
 
       To change the background image in the intro slide, there are several images to choose from in `framework/img` or add your own. Make the change in `_workshop.scss`. CSS has already been included.
 
@@ -112,28 +114,22 @@
       <script type="text/template">
         #Markdown support
 
-        Markdown is a text-to-HTML conversion tool and allows you to write using plain text formatting. See the [Markdown documentation](http://daringfireball.net/projects/markdown/) for syntax. 
+        Markdown is a text-to-HTML conversion tool and allows you to write using plain text formatting. See the [Markdown docs](http://daringfireball.net/projects/markdown/) for syntax. 
         
-        Because the workshop content is written primarily in Markdown, white space should be preserved.
+        Because the workshop content is written primarily in Markdown, white space should be preserved. View the readme file for instructions.
 
         To use Markdown, include the `data-markdown` attribute in the section tag and add the content in `script` tags.
-        
+
 <pre><code>&lt;section class=&quot;slide&quot; data-markdown&gt;
   &lt;script type=&quot;text/template&quot;&gt;
     #This is markdown!
   &lt;/script&gt;
 &lt;/section&gt;
 </code></pre>
-      </script>
-    </section>
-    
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        #Markdown support
         
         Markdown supports content in regular HTML as well, so you can switch between using Markdown & HTML in the same slide, with the exception of `script` tags.  
         
-        For `script` tags, you will need to escape the brackets. View the source of the previous slide to view technique for adding content with script tags.
+        For `script` tags, you will need to escape the brackets.
       </script>
     </section>
     
@@ -141,11 +137,9 @@
       <script type="text/template">
         #Markdown Support
         
-        Code blocks can be added with either three back ticks `(```)` **or** with one 4 space tab.  
+        Code blocks can be added with three back ticks `(```)`.  
         
-        When using back ticks, immediately followed by the language, this will will allow you to specify a language for syntax highlighting.
-        
-        View the HTML page source for the below examples to see the markdown formatting.
+        Add the language immediately after the first set of back ticks will allow you to specify a language for syntax highlighting. View the HTML source for the below examples to see the markdown formatting.
 
         ## Javascript Example: 
 
@@ -203,7 +197,7 @@
       <script type="text/template">
         #Syntax Highlighting
 
-        Code highlighting is provided by [highlight.js](http://highlightjs.org) and will be applied to any code wrapped in `<pre><code></code></pre>`. 
+        Code highlighting courtesy of [highlight.js](http://highlightjs.org) and will be applied to any code wrapped in `<pre><code></code></pre>`. 
         
         The theme files are located in **framework > css > highlightjs**. Visit [highlight.js](http://highlightjs.org) to see the full list of supported languages, themes and other usage information.
 
@@ -213,21 +207,21 @@
     
     <section class="slide" data-markdown>
       <script type="text/template">
-      #Tools
-      
-      Here are some handy tools for creating content.
+        #Tools
+        
+        Here are some handy tools for creating content.
 
-      Replace special characters with HTML Entities  
-      http://www.htmlescape.net/htmlescape_tool.html
+        Replace special characters with HTML Entities  
+        http://www.htmlescape.net/htmlescape_tool.html
 
-      Converts markdown to HTML  
-      https://stackedit.io/editor
+        Converts markdown to HTML  
+        https://stackedit.io/editor
 
-      Converts HTML to markdown  
-      http://domchristie.github.io/to-markdown/
+        Converts HTML to markdown  
+        http://domchristie.github.io/to-markdown/
 
-      LICEcap - simple animated screen captures  
-      http://www.cockos.com/licecap/
+        LICEcap - simple animated screen captures  
+        http://www.cockos.com/licecap/
       </script>
     </section>
     
@@ -337,7 +331,7 @@
       <script type="text/template">
         #CSS demos
 
-        You can include in-slide CSS demos. In this example, The whole slide will get the CSS applied to it. Go ahead, add/change/remove some CSS!
+        You can include in-slide CSS demos. In this example, The whole slide will get the CSS applied to it. Go ahead, add/remove some CSS!
 
         <textarea class="snippet">background-color: lightblue;
         color: rebeccapurple;</textarea>
@@ -355,7 +349,7 @@
       <script type="text/template">
         #CSS demos
 
-        You can also target specific elements rather than the whole slide.
+        You can also target specific elements rather than the whole slide. 
 
         <textarea class="snippet" data-subject="#test">color: slateblue; 
         padding: 10px 15px;</textarea>
@@ -376,6 +370,7 @@
         ```
       </script>
     </section>
+  
 
     <!-- <section class="slide" data-markdown>
       <script type="text/template">
@@ -432,13 +427,85 @@
       Here's a tutorial getting your files online using FileZilla: [FileZilla Client Tutorial](https://wiki.filezilla-project.org/FileZilla_Client_Tutorial_%28en%29)
     </script>
     </section>
+    
+    <!-- SAMPLE CONTENT /////////////////////////// -->
+    <section class="slide" data-markdown data-toc>
+      <script type="text/template">
+        #regular list
+        
+        * free & open source content management system (CMS)
+        * can edit, publish content and manage the website using a user interface, without editing the code or database (though you can!)
+        * started as a blog publishing platform
+        * used by many individuals and companies  
+         ([ladieslearningcode.com](http://ladieslearningcode.com) is powered by WordPress!)
+        * written primarily in [PHP](http://www.php.net) and [MySQL](http://www.mysql.com)
+        * and much [more](https://codex.wordpress.org/WordPress_Features)!
+        
+        ---
+        ###Resources
+        * [WordPress.com and WordPress.org](https://en.support.wordpress.com/com-vs-org/)
+        * http://wordpress.com
+        * http://wordpress.org
+      </script>
+    </section>
 
+    <section class="slide nested-list" data-markdown>
+      <script type="text/template">
+        #nested-list
+        
+        * WordPress**.com**
+          * all technical maintenance & hosting handled by WordPress
+          * has fewer options for customizing
+          * do not need to edit the code
+          * some paid upgrades available for some customization
+          * no plugins :(
+        * WordPress**.org**
+          * provides the codebase for free to download & edit
+          * must purchase your own domain and hosting 
+          * you have full control over theme files & code
+          * plugins :)
+        
+        Today we'll be exploring the **.org** version.
+        
+        ---
+        ###Resources
+        * [WordPress.com and WordPress.org](https://en.support.wordpress.com/com-vs-org/)
+        * http://wordpress.com
+        * http://wordpress.org
+      </script>
+    </section>
+    
+    <section class="slide two-col-list" data-markdown>
+      <script type="text/template">
+        #two-col-list
+        
+        * WordPress**.com**
+          * all technical maintenance & hosting handled by WordPress
+          * has fewer options for customizing
+          * do not need to edit the code
+          * some paid upgrades available for some customization
+          * no plugins :(
+        * WordPress**.org**
+          * provides the codebase for free to download & edit
+          * must purchase your own domain and hosting 
+          * you have full control over theme files & code
+          * plugins :)
+        
+        Today we'll be exploring the **.org** version.
+        
+        ---
+        ###Resources
+        * [WordPress.com and WordPress.org](https://en.support.wordpress.com/com-vs-org/)
+        * http://wordpress.com
+        * http://wordpress.org
+      </script>
+    </section>
+    
     <!-- Last slide -->
     <section class="slide last">
       <h1>Thank you!</h1>
       <h2 class="heading-bg">
-        <span>Title of Workshop</span><br>
-        <span>Second line</span>
+        <span>Title of Workshop<br>Second line</span>
       </h2>  
 
       <img class="instructor" src="http://cl.ly/image/0r3Q3H110G36/profile-generic.jpg" alt="instructor name">
