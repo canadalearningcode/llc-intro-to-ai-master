@@ -71,11 +71,8 @@ h6 {
   margin: 5px 0;
 }
 a {
-  // color: $llc-pink;
-  // text-decoration: none;
   outline: none;
   color: inherit;
-  // border-bottom: 2px solid $llc-pink;
 
   &:hover {
     color: $llc-pink;
@@ -86,6 +83,13 @@ hr {
   border: none;
   border-top: 1px solid $gray-light;
   clear: both;
+  margin: 30px 0 0;
+  display: inline-block;
+  width: 100%;
+  
+  + p {
+    margin-top: 16px;
+  }
 }
 p + ol,
 p + ul {
@@ -104,7 +108,7 @@ p {
 }
 
 // List styles
-ul, ol {
+ul {
   padding: 0;
     
   li {
@@ -116,35 +120,38 @@ ul, ol {
       content: "\203A"; // › symbol
       font-family: $quicksand;
       font-weight: bold;
-      margin-left: -22px;
+      margin-left: -19px;
       padding-right: 10px;
     }
   }
+}
+ul, ol {
+  ol, ul,
   .list-sm & {
+    margin-top: 6px;
     font-size: $font-size-sm;
-    
-    li { margin-bottom: 4px; }
   }
 }
 
-ol > li {
-  margin-left: 40px;
-}
 //used to be no-bullet-list
 .nested-list {
   ul {
+    margin-left: -22px;
+    
+    li {
+      // margin-left: 22px;
+    }
     li:before {
       content: "";
-      margin-left: -32px;
+      margin-left: -9px;
     }
     ol, ul {
-      font-size: $font-size-sm;
       width: 90%;
-      margin: 5px 0px 25px -24px;
+      margin-bottom: 25px;
       
       li:before {
         content: "\203A";
-        margin-left: -18px;
+        margin-left: 4px;
       }  
     }
   }
@@ -170,7 +177,6 @@ ol > li {
       &:first-child {
         margin-right: 5%;
       }
-      
       &:before {
         content: "";
         margin-left: -12px;
@@ -223,10 +229,7 @@ th {
   text-align: left;
   font-weight: normal;
 }
-td {
-  // padding-right: 60px;
-  // padding-left: 10px;
-  
+td {  
   .two-col-table & {
     width: 50%;
   }
@@ -262,7 +265,8 @@ td {
     padding-left: 10px;
   }  
 }
-img.left {
+img.left,
+iframe.left {
   margin-right: 30px;
 }
 .right {
@@ -396,7 +400,6 @@ a.highlight {
     letter-spacing: 0.05rem;
     font-size: $font-size-heading;
     font-family: "Quicksand",sans-serif;
-    // letter-spacing: -0.05em;
     text-transform: uppercase;
   }
 }
