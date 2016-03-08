@@ -12,3 +12,4 @@ Created with <a href="https://github.com/LeaVerou/csss/sample-slideshow.html">Le
 This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
 
 Created by [Christina Truong](http://twitter.com/christinatruong) for Ladies Learning Code.
+Email questions & comments to <content@ladieslearningcode.com>.
