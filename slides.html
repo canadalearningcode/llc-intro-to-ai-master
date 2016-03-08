@@ -43,7 +43,7 @@
         
         <h2>Download<br> & Install</h2>
         <ol class="downloads">
-          <li>Learner files (zip file): <a href="https://github.com/ladieslearningcode/llc-html-css-valentines/archive/master.zip">http://bit.ly/llc-valentines</a>
+          <li>Learner files (zip file): <a href="https://github.com/ladieslearningcode/workshop-repo-name/archive/master.zip">http://bit.ly/create-custom-url</a>
             <ul>
               <li>unzip the learner file (<em>extract all</em> if you’re on a PC)</li>
               <li>open <em>slides.html</em> in the browser to view the slides</li>
@@ -64,18 +64,18 @@
     <section class="slide intro">
       <img class="logo" src="framework/img/llc-logo-white.png" alt="Ladies Learning Code logo">
       <h1 class="heading-bg">
-        <span>Intro to HTML & CSS Animations:<br>
-        Valentine's Day Edition</span>
+        <span>Workshop Title:<br>
+        Second Line if Needed</span>
       </h1>
       
       <!-- FILL IN INSTRUCTOR DETAILS -->
-      <!-- <img class="instructor" src="http://placehold.it/225x225" alt="Instructor Name">
+      <img class="instructor" src="http://placehold.it/225x225" alt="Instructor Name">
       <h2><span class="cursive">with</span> Instructor name</h2>  
       <ul>
         <li><a href="mailto:">hello@email.com</a></li>
         <li><a href="http://website.com">website.com</a></li>
         <li><a href="http://twitter.com/">@twitter</a></li>
-      </ul> -->
+      </ul>
       
       <div class="sponsor">
         <p>In partnership with<br> <img src="framework/img/telus-logo-white.svg" alt="Telus"></p>
@@ -93,7 +93,7 @@
 
       Put all workshop specific images in `framework/img/workshop`.
       
-      All CSS is written in [Sass](http://sass-lang.com/).  Put all specific workshop customizations in `framework/sass/_workshop.scss`.  If you'd like to add an improvement or enhancement, please submit a pull request or open an issue.
+      All CSS is written in [Sass](http://sass-lang.com/).  Put all specific workshop customizations in `framework/sass/_workshop.scss`.
 
       To change the background image in the intro slide, there are several images to choose from in `framework/img` or add your own. Make the change in `_workshop.scss`. CSS has already been included.
 
@@ -117,12 +117,14 @@
 
 <pre><code>&lt;section class=&quot;slide&quot; data-markdown&gt;
   &lt;script type=&quot;text/template&quot;&gt;
-    #This is markdown!
+    #This is an h1!
+    
+    This is a paragraph.
   &lt;/script&gt;
 &lt;/section&gt;
 </code></pre>
         
-        Markdown supports content in regular HTML as well, so you can switch between using Markdown & HTML in the same slide, with the exception of `script` tags.  
+        Markdown supports content in HTML as well, so you can switch between using Markdown & HTML in the same slide, with the exception of `script` tags.  
         
         For `script` tags, you will need to escape the brackets.
       </script>
@@ -134,7 +136,7 @@
         
         Code blocks can be added with three back ticks `(```)`.  
         
-        Add the language immediately after the first set of back ticks will allow you to specify a language for syntax highlighting. View the HTML source for the below examples to see the markdown formatting.
+        Add the language immediately after the first set of back ticks to allow you to specify a language for syntax highlighting. View the HTML source for the below examples to see the markdown formatting.
 
         ## Javascript Example: 
 
@@ -222,14 +224,14 @@
     
     <section class="slide title" data-markdown data-toc>
       <script type="text/template">
-        <h1>Title Slide Only</h1>
+        # Title Slide Only
       </script>
     </section>
 
     <section class="slide title" data-markdown>
       <script type="text/template">
-        #Title Slide
-        ##With a Sub-heading
+        # Title Slide
+        ##W ith a Sub-heading
       </script>
     </section>
 
@@ -245,6 +247,13 @@
           <h2>Sub-heading example</h2>
         </section>
         ```
+<pre><code>&lt;section class=&quot;slide title&quot; data-markdown&gt;
+  &lt;script type=&quot;text/template&quot;&gt;
+    # Title Slide
+    ## With a Sub-heading
+  &lt;/script&gt;
+&lt;/section&gt;
+</code></pre>
         
         Also, each slide heading should be an `h1`.
       </script>
@@ -275,17 +284,18 @@
       <script type="text/template">
         #Course Outline
         
-        To add items to the table of contents, add `data-toc` to the `<section>` tag of the slide that contains the heading to be included.  Must be an `<h1>` heading. Only add the relevant headings/slides.
+        To create a table of contents using slide titles, add `data-toc` to the `<section>` tag of the slide that contains the heading to be included.  Must be an `<h1>` heading. Only add the relevant headings/slides.
         
-        ```
+        ```xml
         <section class="slide" data-markdown data-toc>
           #Customizing slides
         </section>
+        ```
         
-        <section class="slide title" data-toc>
-          <h1>Title Slide Example</h1>
-        </section>
-        ...
+        Then in the slide, add this snippet to generate the list:
+        
+        ```xml
+        <div class="table-of-contents"></div> 
         ```
         See the next slide to see the sample Table of Contents.
       </script>
@@ -309,25 +319,14 @@
 
         ![](http://cl.ly/image/14193Y1x1f2c/mic-drop.gif)
       </script>
-    </section>
-
-    <section class="slide side-by-side" data-markdown data-toc>
-      <script type="text/template">
-        #Two images
-
-        Add a class of `side-by-side` to `<section>` to align two images.
-
-        ![](http://cl.ly/image/3c2y1v2A2o1q/Image%202015-01-29%20at%2011.55.36%20PM.png)
-        ![](http://cl.ly/image/3Z3U023P361J/Image%202015-01-30%20at%2012.37.27%20AM.png)
-      </script>
-    </section>
+    </section>    
 
     <section class="slide" data-markdown>
       <script type="text/template">
         #CSS demos
 
-        You can include in-slide CSS demos. In this example, The whole slide will get the CSS applied to it. Go ahead, add/remove some CSS!
-
+        You can include in-slide CSS demos. In this example, The whole slide will get the CSS applied to it.
+        
         <textarea class="snippet">background-color: lightblue;
         color: rebeccapurple;</textarea>
 
@@ -353,114 +352,63 @@
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nesciunt sint beatae dolor dolorum aliquid quis explicabo vitae numquam.
         </div>
 
-        In the `<textarea>`, add a `data-subject` attribute with a value that matches the `id` of the element to be targeted.  Also, add `.example` to add the border style. 
-          
-        ```
-        <textarea class="snippet" data-subject="#test">color: slateblue; 
-        padding: 10px 15px;</textarea>
-
-        <div id="test" class="example">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nesciunt sint beatae dolor dolorum aliquid quis explicabo vitae numquam.
-        </div>
-        ```
+        In the `<textarea>`, add a `data-subject` attribute with a value that matches the `id` of the element to be targeted.  Also, add `.example` to add the border style. See markup in the HTML source.
       </script>
     </section>
-  
-
-    <!-- <section class="slide" data-markdown>
-      <script type="text/template">
-        #Things to add
-        using blockquotes as callouts
-        
-        list styles
-        no-bullet-list
-        
-        using resource style
-        ---
-        ###Resources
-        * [WordPress.com and WordPress.org](https://en.support.wordpress.com/com-vs-org/)
-        * http://wordpress.com
-        * http://wordpress.org
-        
-        .note class
-      </script>
-    </section> -->
     
-    <!-- <section class="slide" data-markdown>
+    <section class="slide" data-markdown>
       <script type="text/template">
-      <h2>Presentation mode</h2>
-
-      <p>This slide has presenter notes. They are only visible in presenter view (Ctrl+P or Shift+P).  Just add the <code>.presenter-notes</code> class to the element container the notes.
-
-      <p>Check out the notes in this slide!</p>
-
-      <p class="presenter-notes">
-        Notes! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt soluta sit maiores nihil doloribus tempore dolor debitis a repudiandae recusandae natus officia, ad asperiores quaerat facilis nobis illo alias? Quaerat.
-      </p>
-      </script>
-    </section> -->
-
-    <section class="slide small-type" data-markdown>
-      <script type="text/template">
-      #Next Steps
-
-      [Affiliate info to be included in all presentations. Revise as required.]
-      
-      Explore more Ladies Learning Code workshops by following our [Roadmap](http://ladieslearningcode.com/roadmap/).
-      
-      ##Getting your site online
-      
-      You will need to register a domain name and purchase hosting. Here are some suggestions:
-      
-      * [dreamhost.com](http://www.dreamhost.com/r.cgi?2085384) - domains and hosting - use promo code **LLC40** to get $40 off your registration!
-      * [hover.com](http://hover.com/ladiescode) - domains - save 10% with the promo code "learningcode"
-
-      Why keep your domains and hosting separate?<!-- .element: class="note" --> [Learn more about Hover](http://ladieslearningcode.com/getting-hosted-domains-with-hover/).
-
-      You will also need to upload your files to your hosting server. You will need some info usually provided by your hosting service provider: FTP Address, Username, Password.
-
-      Here's a tutorial getting your files online using FileZilla: [FileZilla Client Tutorial](https://wiki.filezilla-project.org/FileZilla_Client_Tutorial_%28en%29)
-    </script>
-    </section>
-    
-    <!-- SAMPLE CONTENT /////////////////////////// -->
-    <section class="slide" data-markdown data-toc>
-      <script type="text/template">
-        #regular list
+        # Footnotes & small text
         
-        * free & open source content management system (CMS)
-        * can edit, publish content and manage the website using a user interface, without editing the code or database (though you can!)
-        * started as a blog publishing platform
-        * used by many individuals and companies  
-         ([ladieslearningcode.com](http://ladieslearningcode.com) is powered by WordPress!)
-        * written primarily in [PHP](http://www.php.net) and [MySQL](http://www.mysql.com)
-        * and much [more](https://codex.wordpress.org/WordPress_Features)!
+        Use the class "note" if you want to leave a note in addition to slide content.
+        
+        This is a note! Use this for "gotchas" and additional info.<!-- .element: class="note" -->
+        
+        To add a Resources section at the end of bottom of the page, add a horizontal rule, an h3 heading called "Resources", "Resource" or "Pro tip!"  Use a list or paragraph to add resources.  See HTML source code for syntax.
         
         ---
         ###Resources
-        * [WordPress.com and WordPress.org](https://en.support.wordpress.com/com-vs-org/)
-        * http://wordpress.com
-        * http://wordpress.org
+        * example 1
+        * example 2
+        * example 3
       </script>
     </section>
     
     <section class="slide" data-markdown data-toc>
       <script type="text/template">
-        #regular ordered list
+        #Default list style
         
-        1. free & open source content management system (CMS)
-        1. can edit, publish content and manage the website using a user interface, without editing the code or database (though you can!)
-        1. started as a blog publishing platform
-        1. used by many individuals and companies  
-         ([ladieslearningcode.com](http://ladieslearningcode.com) is powered by WordPress!)
-        1. written primarily in [PHP](http://www.php.net) and [MySQL](http://www.mysql.com)
-        1. and much [more](https://codex.wordpress.org/WordPress_Features)!
+        No additional markup or CSS required.
+        
+        * Cupcake ipsum dolor sit amet sweet roll.
+        * Carrot cake powder pastry jelly beans fruitcake.
+        * Liquorice gummies caramels powder. 
+        * Chocolate bar icing marzipan candy muffin marzipan.
+        * Gummi bears lollipop bear claw toffee sugar plum apple pie carrot cake cotton candy danish.
         
         ---
         ###Resources
-        * [WordPress.com and WordPress.org](https://en.support.wordpress.com/com-vs-org/)
-        * http://wordpress.com
-        * http://wordpress.org
+        * http://cupcakeipsum.com
+        * http://ladieslearningcode.com
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown data-toc>
+      <script type="text/template">
+        #Default ordered list style
+        
+        No additional markup or CSS required.
+        
+        1. Cupcake ipsum dolor sit amet sweet roll.
+        1. Carrot cake powder pastry jelly beans fruitcake.
+        1. Liquorice gummies caramels powder. 
+        1. Chocolate bar icing marzipan candy muffin marzipan.
+        1. Gummi bears lollipop bear claw toffee sugar plum apple pie carrot cake cotton candy danish.
+        
+        ---
+        ###Resources
+        1. http://cupcakeipsum.com
+        1. http://ladieslearningcode.com
       </script>
     </section>
 
@@ -468,19 +416,16 @@
       <script type="text/template">
         #nested-list
         
-        * WordPress**.com** all technical maintenance & hosting handled by WordPress
-          * all technical maintenance & hosting handled by WordPress
-          * has fewer options for customizing
-          * do not need to edit the code
-          * some paid upgrades available for some customization
-          * no plugins :(
-        * WordPress**.org**
-          * provides the codebase for free to download & edit
-          * must purchase your own domain and hosting 
-          * you have full control over theme files & code
-          * plugins :)
+        Add a class of `.nested-list` in the section tag.
         
-        Today we'll be exploring the **.org** version.
+        * Cupcake ipsum dolor sit amet sweet roll.
+          * Carrot cake powder pastry jelly beans fruitcake.
+          * Gummi bears lollipop bear claw toffee sugar plum apple pie carrot cake cotton candy danish.
+        * Cupcake ipsum 
+          1. Chocolate bar icing marzipan candy muffin marzipan.
+          1. Gummi bears lollipop bear claw toffee sugar plum apple pie carrot cake cotton candy danish.
+        
+        Just a paragraph.
         
         ---
         ###Resources
@@ -494,25 +439,44 @@
       <script type="text/template">
         #two-col-list
         
-        * WordPress**.com**
-          * all technical maintenance & hosting handled by WordPress
-          * has fewer options for customizing
-          * do not need to edit the code
-          * some paid upgrades available for some customization
-          * no plugins :(
-        * WordPress**.org**
-          * provides the codebase for free to download & edit
-          * must purchase your own domain and hosting 
-          * you have full control over theme files & code
-          * plugins :)
+        Nested list displayed in two columns.  Add a class of `.two-col-list` in the section tag.
         
-        Today we'll be exploring the **.org** version.
+        * Cupcake ipsum dolor
+          * Carrot cake powder pastry
+          * Gummi bears lollipop bear claw toffee sugar plum 
+          * apple pie carrot cake cotton candy danish.
+        * Cupcake ipsum 
+          1. Chocolate bar icing marzipan candy muffin marzipan.
+          1. Gummi bears lollipop bear claw toffee         
         
         ---
         ###Resources
         * [WordPress.com and WordPress.org](https://en.support.wordpress.com/com-vs-org/)
         * http://wordpress.com
         * http://wordpress.org
+      </script>
+    </section>
+
+    <section class="slide small-type" data-markdown>
+      <script type="text/template">
+        #Next Steps
+
+        [Affiliate info to be included in all presentations. Revise as required.]
+        
+        Explore more Ladies Learning Code workshops by following our [Roadmap](http://ladieslearningcode.com/roadmap/).
+        
+        ##Getting your site online
+        
+        You will need to register a domain name and purchase hosting. Here are some suggestions:
+        
+        * [dreamhost.com](http://www.dreamhost.com/r.cgi?2085384) - domains and hosting - use promo code **LLC40** to get $40 off your registration!
+        * [hover.com](http://hover.com/ladiescode) - domains - save 10% with the promo code "learningcode"
+
+        Why keep your domains and hosting separate?<!-- .element: class="note" --> [Learn more about Hover](http://ladieslearningcode.com/getting-hosted-domains-with-hover/).
+
+        You will also need to upload your files to your hosting server. You will need some info usually provided by your hosting service provider: FTP Address, Username, Password.
+
+        Here's a tutorial getting your files online using FileZilla: [FileZilla Client Tutorial](https://wiki.filezilla-project.org/FileZilla_Client_Tutorial_%28en%29)
       </script>
     </section>
     
