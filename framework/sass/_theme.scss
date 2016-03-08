@@ -29,6 +29,11 @@ body {
   background: #ecf0f1;
 }
 
+strong {
+  font-weight: 700;
+  color: black;
+}
+
 h1 {
   font-family: $heading-font;
   letter-spacing: -0.05em;
@@ -48,8 +53,7 @@ h1 {
     background: transparent;
   }
 }
-h2 {
-  font-size: $font-size-heading-sm;
+h2, h3 {
   margin: 0;
   
   + p,
@@ -58,13 +62,13 @@ h2 {
     margin-top: 6px;
   }
 }
-h3, h4 {
-  margin: 32px 0 10px;
-  
-  + p, + pre {
-    margin-top: 4px;
-  }
+h2 {
+  font-size: $font-size-heading-sm;
 }
+h3 {
+  font-size: $font-size-heading-sm * .9;
+}
+
 a {
   outline: none;
   color: inherit;
@@ -74,6 +78,7 @@ a {
     text-decoration: none;
   }
 }
+
 hr {
   border: none;
   border-top: 1px solid $gray-light;
@@ -93,22 +98,28 @@ p {
   + h2 {
     margin-top: 30px;
   }
-  + ol,
-  + ul {
-    margin-top: 10px;
-  }
-}
-.cursive {
-  font-family: $cursive;
-  color: $llc-pink;
 }
 
+iframe {
+  margin-top: 15px;
+}
+
+
 // List styles
+//----------------
+ol, ul {
+  > li {
+    margin-bottom: 6px;
+  }
+  ol, ul {
+    margin-top: 6px;
+    font-size: $font-size-sm;
+  }
+}
 ul {
   padding: 0;
     
-  li {
-    margin-bottom: 6px;
+  > li {
     margin-left: 24px;
     list-style-type: none;
     
@@ -121,31 +132,22 @@ ul {
     }
   }
 }
-ul, ol {
-  ol, ul,
-  .list-sm & {
-    margin-top: 6px;
-    font-size: $font-size-sm;
-  }
+p + ul,
+p + ol {
+  margin-top: 20px;
 }
 
-//used to be no-bullet-list
 .nested-list {
-  ul {
-    margin-left: -22px;
+  > ul {
+    margin-left: -24px;
     
-    li:before {
+    > li:before {
       content: "";
-      margin-left: -9px;
+      margin-left: -10px;
     }
     ol, ul {
       width: 90%;
       margin-bottom: 25px;
-      
-      li:before {
-        content: "\203A";
-        margin-left: 4px;
-      }  
     }
   }
   .resources + ul {
@@ -158,6 +160,7 @@ ul, ol {
     }
   }
 }
+
 .two-col-list > {
   ul, ol {
     overflow: hidden;
@@ -186,11 +189,6 @@ ul, ol {
       }
     }
   }
-}
-
-strong {
-  font-weight: 700;
-  color: black;
 }
 
 table {
@@ -260,6 +258,10 @@ img.left,
 iframe.left {
   margin-right: 30px;
 }
+img.right,
+iframe.right {
+  margin-left: 30px;
+}
 
 .right {
   float: right;
@@ -273,6 +275,10 @@ iframe.left {
     margin: 0 auto;
     display: block;
   }
+}
+.cursive {
+  font-family: $cursive;
+  color: $llc-pink;
 }
 .highlight em,
 a.highlight {
@@ -319,7 +325,7 @@ a.highlight {
   background-size: cover;
   height: 100%;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
   
   // Adds extra space to the bottom of the slides to allow 
@@ -419,6 +425,15 @@ a.highlight {
   margin-bottom: -25px;
   text-transform: uppercase;
   font-weight: bold;
+}
+p {
+  textarea.snippet {
+    margin-top: -15px;
+    margin-bottom: -10px;
+  }
+  .edit {
+    margin-top: -34px;
+  }
 }
 textarea.snippet {
   width: 100%;
@@ -638,7 +653,7 @@ footer {
   font-size: $font-size-sm;
   
   li {
-    margin-bottom: 0;
+    margin-bottom: 2px;
   }
   a {
     color: $gray-dark;
@@ -653,7 +668,7 @@ footer {
 /* code blocks
 -----------------------------*/
 pre {
-  margin: 12px 0;
+  margin: 18px 0 12px;
   white-space: pre-wrap;
 
   code {
