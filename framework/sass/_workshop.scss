@@ -6,3 +6,41 @@
               url(../img/banner-home1.jpg) no-repeat;
   background-size: cover;
 }
+
+.women-in-ai img {
+	
+	width: 30%;
+	display: inline-block;
+	margin-right: 10px;
+	float: left;	
+		margin-bottom: 20px;
+
+}
+p {
+	clear: both;
+	margin-bottom: 20px;
+}
+.women-in-ai p:nth-child(4) img {
+		width: 80%;
+		display: block;
+		margin: 0 auto;
+		float: none;
+
+}
+
+.women-in-ai h2 {
+	clear: both;
+	display: block;
+	margin-bottom: 25px;
+}
+.confusion-matrix {
+	width: 300px;
+	display: block;
+}
+
+.td--half {
+	width: 40%;
+}
+.gif-playing {
+	width: 60%;
+}
