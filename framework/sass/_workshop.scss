@@ -44,3 +44,21 @@ p {
 .gif-playing {
 	width: 60%;
 }
+
+.flex {
+	display: flex;
+	div {
+		width: 33%;
+		padding: 20px;
+	}
+}
+.slide.title.why-care {
+	background-image: url('../img/workshop/hidden-figures-gif.gif');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center center;
+}
+
+img.medium-image {
+	width: 40%;
+}
