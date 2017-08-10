@@ -19,6 +19,9 @@
 p {
 	clear: both;
 	margin-bottom: 20px;
+	footer & {
+		clear: none;
+	}
 }
 .women-in-ai p:nth-child(4) img {
 		width: 80%;

@@ -367,7 +367,7 @@ Think about all the amazing apps that already make our lives better thanks to da
 
                           <section class="slide" data-markdown>
                             <script type="text/template">
-                            # Why should you care?s
+                            # Why should you care?
                               ## 5. Because with AI you can change the world!
                               
                               AI is a fascinating field of discovery that can solve problems. So, why not get involved?
@@ -419,20 +419,27 @@ Think about all the amazing apps that already make our lives better thanks to da
 
             ![spreadsheet](framework/img/workshop/sample-db.png)
 
-            3. Structured vs Unstructured Data
-
-            When we think of databases we're thinking of structured data. That is, data that can be neatly categorized and searched by a computer algorithm. Unstructured data is a bit more messy and cannot neatly be categorized. Think for example of a photo library. We can now catalog our photos using advanced data markers like geo-tags, time stamps and even face recognition, but it's still very hard for a computer to really know what a photo is about. 
+            
 
           </script>
         </section>
-    
+            <section class="slide" data-markdown>
+              <script type="text/template">
+                # Structured vs Unstructured Data
+
+                When we think of databases we're thinking of structured data. That is, data that can be neatly categorized and searched by a computer algorithm. 
+
+                Unstructured data is a bit more messy and cannot neatly be categorized. Think for example of a **photo library**. We can now catalog our photos using advanced data markers like geo-tags, time stamps and even face recognition, but it's still very hard for a computer to really know what a photo is about. 
+
+              </script>
+            </section>
         <section class="slide" data-toc data-markdown>
           <script type="text/template">
             #Exercise 1: Our First Database (20 mins)
 
-            1. Get into a team of 5 with the students around you.
+            1. Get into a team of 4 with the students around you.
             1. Select a team Data Input Specialist who will fill in everyone’s information in the database.
-            1. Go to the spreadsheet at: http://bit.ly/llc-ai-dataset
+            1. Go to the spreadsheet at: http://bit.ly/llc-ai-dataset 
             1. Go around your circle and give the Data Input Specialist the following information to enter into the spreadsheet. Be sure to only use the options listed below: 
               - Age Range: 18-29, 30-40, 40-50, 50+
               - The number of hours watching TV per week
@@ -502,8 +509,6 @@ Think about all the amazing apps that already make our lives better thanks to da
               #Dataiku
 
               Today we will be using Dataiku to visualize and analyze our datasets. Dataiku is a platform that enables us to analyse our data and (later), run machine learning algorithms on our data, using a friendly Graphical User Interface(GUI). If we want, it also allows us to look behind the interface at the code itself to make changes. 
-
-              Today, we will be doing both.
             </script>
           </section>
           <section class="slide" data-markdown>
@@ -524,20 +529,20 @@ Think about all the amazing apps that already make our lives better thanks to da
 
               <section class="slide" data-toc data-markdown>
                 <script type="text/template">
-                  # Offline Option for Mac: Installing Dataiku on an Apple Computer (10 mins)
+                  # Offline Option for Mac: Installing Dataiku on an Apple Computer (15 mins)
 
                   1. Wait for the USB from the instructor with offline versions of dataiku and all the software you will need.
                   1. Open the DMG file and drop the application into the Applications folder.
                   1. Open up the application by finding it with Spotlight or clicking on its icon in the Applications folder. 
                   1. You may need to authorize Dataiku to run on your OS. If so, Open System Preferences, go to "Security & Privacy" and authorize the application
                   DSS opens automatically in your browser (only Chrome and Firefox are supported). To reopen DSS, click on the DSS logo in the menubar or browse to [http://localhost:11200](localhost:11200)
-                  1. Dataiku requires that you register for an account when you load up the app the first time. It's free. 
+                  1. Dataiku requires that you register for an account when you load up the app the first time. It's free. It may take 5-10 minutes to receive your account confirmation so this is a good time for a break.
 
                 </script>
               </section>
         <section class="slide" data-toc data-markdown>
           <script type="text/template">
-            # Offline Option: Installing Dataiku on a Windows Computer (10 mins)
+            # Offline Option: Installing Dataiku on a Windows Computer (15 mins)
 
             ## For Windows computers, we’ll be using the Virtual Box option since Dataiku only runs locally on Linux and Apple computers. Get the USB from the instructor/mentor with the software you need.
             1. Move the files from the Windows Installation folder to your computer.
@@ -651,6 +656,8 @@ Think about all the amazing apps that already make our lives better thanks to da
                         #What is Machine Learning? 
 
                         Machine learning involves feeding data into a special kind of computer program, specifying a particular outcome, and having a machine develop its own algorithm to achieve the outcome. (Will Knight, July 20, 2017)
+                        
+                        For instance, presented with a database of information about credit card transactions, such as date, time, merchant, merchant location, price, and whether the transaction was legitimate or fraudulent, a machine learning system learns patterns that are predictive of fraud.
 
                         - Traditionally data goes into the computer, the algorithm does its job **and gives out the result**.
                         - Learners turns this around: in goes the data and the desired result and **out comes the model** that turns one into the other.
@@ -660,8 +667,7 @@ Think about all the amazing apps that already make our lives better thanks to da
                         <hr>
                         ### Resources
                         [AI Fight Club Could Help Save Us from a Future of Super-Smart Cyberattacks](https://www.technologyreview.com/s/608288/ai-fight-club-could-help-save-us-from-a-future-of-super-smart-cyberattacks/)
-                        ### Notes
-                        Machine learning refers to the ability of computer systems to improve their performance by exposure to data without the need to follow explicitly programmed instructions. At its core, machine learning is the process of automatically discovering patterns in data. Once discovered, the pattern can be used to make predictions. For instance, presented with a database of information about credit card transactions, such as date, time, merchant, merchant location, price, and whether the transaction was legitimate or fraudulent, a machine learning system learns patterns that are predictive of fraud. The more transaction data it processes, the better its predictions are expected to become.
+                        
                         </script>
                       </section>
      
@@ -669,7 +675,7 @@ Think about all the amazing apps that already make our lives better thanks to da
                         <script type="text/template">
                           # Machine Learning is a core of AI
 
-                          ![ml pie](framework/img/workshop/pie-chart-whatisml.png)
+                          <img src="framework/img/workshop/ai-ml-dl-01.svg" alt="AI, ML, DL" width="50%" style="display: block; margin: 0 auto;">
                         </script>
                       </section>
                           <section class="slide" data-markdown>
@@ -681,7 +687,7 @@ Think about all the amazing apps that already make our lives better thanks to da
 
                               `f(x) = x²`
 
-                              These functions, which are called models, can then be used for predictions 
+                              These functions, which are called models, can then be used for predictions. For example, figuring out which employee at IBM is most likely to leave their job next.
                               
                               **Learning Algorithm/Method:** An optimization 
 
@@ -702,30 +708,24 @@ Think about all the amazing apps that already make our lives better thanks to da
                                     <script type="text/template">
                                       # Supervised
 
-                                      ![elen selfie](framework/img/workshop/ellen-selfie.png)
+                                      
+                                      <img  width="80%" src="framework/img/workshop/supervised-learning.svg"  alt="supervised learning ellen selfie">
 
                                       Supervised learning happens when we feed the computer data and the outcome we want from that data. Then we let the computer find a correlation between the data and the outcome so that it may predict outcomes with new data without us providing the outcome. 
 
                                       For example: 
+
                                       1. We could give a computer a set of data about many different patients. 
                                       2. We could then tell the computer which of those patients have cancer and which ones don't. 
                                       3. The computer will find a correlation between the patients' data and whether or not they have cancer (that would be the model). 
-                                      4. Then it will use this model which is no more than a mathematical function, to figure out which patients have cancer from the new dataset we give it without outcomes. We 
+                                      4. Then it will use this model which is no more than a mathematical function, to figure out which patients have cancer from the new dataset we give it without outcomes. 
+                                      
+                                      The **goal** is to minimize the error between the model's predictions and the actual outcomes.
 
+                                      In a **perfect world** we would minimize errors on all possible inputs. 
 
-                                      <hr>
-                                      ### Notes
-                                      Training experience: a set of labeled example of the form <X,y> where X is representations of input variables and y is the outcome
-
-                                      What to learn: A function f that maps X to y
-
-                                      F is similar to a teacher who knows the right answers
-
-                                      Goal: Minimize the error between f predictions and actual outcomes
-
-                                      Ideal case: minimize the error on all possible inputs 
-
-                                      Real case: we have limited set of instances with their corresponding outcomes
+                                      In **reality**, we usually don't have enough inputs with corresponding outcomes to teach the computer well enough.
+          
 
                                     </script>
                                   </section>
@@ -755,21 +755,21 @@ Think about all the amazing apps that already make our lives better thanks to da
           <script type="text/template">
             # Unsupervised Learning
 
-            ![unsupervised learning graph](framework/img/workshop/unsupervised-learning.png)
+            <img src="framework/img/workshop/clustering-01.svg" alt="AI, ML, DL" width="80%" style="display: block;">
+              In unsupervised learning we give the computer unlabeled data (Input representations without their corresponding outcomes). 
 
-            Training experience: unlabeled data (Input representations without their corresponding outcomes)
+              **The hacker in the haystack:** Imagine if we wanted a computer to figure out which internet users were hackers. We likely wouldn't have enough data for supervised learning so we would instead use unsupervised learning and the computer would find clusters of users, some who could be potential hackers based on online behaviour that is different than normal.
 
-            ## What to learn: 
 
-              - Clustering: group data based on some similarity metric
-              - Learning Representation and Dimensionality Reduction
+              **Clustering:** group data based on some similarity metric.
+
 
           </script>
         </section>
             <section class="slide" data-markdown>
               <script type="text/template">
               # Reinforcement Learning
-                ![reinforcement learning graph](framework/img/workshop/reinforcement-learning.png)
+                <img src="framework/img/workshop/reinforced-learning-01.svg" alt="AI, ML, DL" width="50%">
 
                 - **Training Experience:** the agent interacts with the environment and receives numerical reward signals
                 - **What to learn:** Best action for each state of environment- A behavior that maximize the reward in the long run
@@ -823,13 +823,13 @@ Think about all the amazing apps that already make our lives better thanks to da
 
                 <section class="slide" data-markdown>
                   <script type="text/template">
-                    # Explore Data Exercise
+                    # Exploring the Data
 
-                    Columns are called input variables or features or attributes
+                    Columns are called **input variables** or **features** or **attributes**
 
-                    - The outcome (which we are trying to predict) are called output variables or targets
-                    - A row in the table is called training example or instance
-                    - The whole table is called data set.
+                    - The outcome (which we are trying to predict) are called **output variables or targets**
+                    - A row in the table is called **training example or instance**
+                    - The whole table is called the **data set**.
 
                   </script>
                 </section>
@@ -863,6 +863,8 @@ Think about all the amazing apps that already make our lives better thanks to da
                         <section class="slide" data-markdown>
                           <script type="text/template">
                             # Exercise 4: Cleaning the data (8 minutes)
+                            
+                            Now, let's get back to our challenge of figuring out who might leave their job next at IBM so we can stop attrition in its tracks. 
 
                             1. We’re going to create another project. Click on the plus sign on the left hand side of the DataIku dashboard. Let’s call it “Machine Learning Project”
                             1. We're then going to download the necessary dataset from [http://bit.ly/llc-ai-hr-dataset](http://bit.ly/llc-ai-hr-dataset)
@@ -883,7 +885,7 @@ Think about all the amazing apps that already make our lives better thanks to da
                                 F(X)=y, where F(X) is a “good predictor” for the value of y.
                                 e.g. # of years at the job might be a good predictor of attrition (whether someone will stay or leave their job)
                               ## Steps to solve a problem using ML:
-                                1. Recognize input-output pairs are.
+                                1. Identify what the input-output pairs are.
                                 2. Encode inputs and outputs.
                                 3. Choose a class of ML models and experimentally find the best model
 
@@ -904,7 +906,7 @@ Think about all the amazing apps that already make our lives better thanks to da
                                          1. A training and validation set used only to find the right function predicator
                                          2. A test set used to report the prediction error of the model
                                     - These sets must be disjoint!
-                                    - Normally, we use 70% of data as Training and validation set and the rest as test set
+                                    - Normally, we use 70% of the data as a Training and validation set and the rest as a test set
                                     - In case of having smaller datasets, we use cross-validation
 
                                   </script>
@@ -996,11 +998,6 @@ Think about all the amazing apps that already make our lives better thanks to da
   <li></li>
   <li>Start with Decision Tree as it has the best interpretability</li>
   <li>Press the green Train button. <img src="framework/img/workshop/ml-ex/lab-step-one.gif" alt="1-4"></li>
-
-
-
-
-
   <li>Check the performance and importance of different features</li>
   <li>Go to setting</li>
   <li>Review evaluation process, features set</li>

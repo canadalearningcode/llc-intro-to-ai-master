@@ -591,6 +591,8 @@ code {
 p {
   clear: both;
   margin-bottom: 20px; }
+  footer p {
+    clear: none; }
 
 .women-in-ai p:nth-child(4) img {
   width: 80%;
