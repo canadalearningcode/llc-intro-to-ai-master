@@ -709,7 +709,7 @@ Think about all the amazing apps that already make our lives better thanks to da
                                       # Supervised
 
                                       
-                                      <img  width="80%" src="framework/img/workshop/supervised-learning.svg"  alt="supervised learning ellen selfie">
+                                      <img  width="60%" src="framework/img/workshop/supervised-learning.svg"  alt="supervised learning ellen selfie">
 
                                       Supervised learning happens when we feed the computer data and the outcome we want from that data. Then we let the computer find a correlation between the data and the outcome so that it may predict outcomes with new data without us providing the outcome. 
 
@@ -911,59 +911,113 @@ Think about all the amazing apps that already make our lives better thanks to da
 
                                   </script>
                                 </section>
+          <section class="slide" data-markdown>
+            <script type="text/template">
+            # Class Exercise: Choosing our inputs and output
+              We need to choose which inputs we will use for our learning, and what the expected output is.
+              <ol>
+                <li>
+                <p>Back in our Machine Learning Project we left off at a cleaned table. Next we'll go to a new place: the Lab</p>
+                <p>Here we'll want to select "Prepare data and build models" in the Visual Analysis option.  <img src="framework/img/workshop/ml-ex/Prepare-data-an-build-models.png" alt="buiod model"></p></li>
+                <li><p>Right click on the column that you want to predict and select "Create prediction model" This column will be the output. In this case we want to predict attrition.</p>
+                <img src="framework/img/workshop/ml-ex/create-prediction-model.png" alt="build models">
+                </li>
+                <li>Start with Decision Tree as it has the best interpretability</li>
+                <li>Press the green Train button. <img src="framework/img/workshop/ml-ex/lab-step-one.gif" alt="1-4"></li>
+                
+              </ol>
+              
 
-                                    <section class="slide" data-markdown>
-                                      <script type="text/template">
-                                      # Evaluation Metrics
-                                        <table>
-                                          <tr>
-                                            <td>
-                                            <ul>
-                                              
-                                            
-                                              <li>Classification Accuracy: The number of correct predictions as a ratio of all predictions</li>
-                                              <li>Confusion Matrix:
-                                              <img class="confusion-matrix" width="200" src="framework/img/workshop/prediction-table.png" alt="confusion matrix">
+              
 
+            </script>
+          </section>
 
-                                              </li>
-                                            
+              <section class="slide" data-markdown>
+                <script type="text/template">
+                  #Class Exercise cont'd: Evaluating the inputs:
 
+                  1. You will now see the results of your model. 
+                    - You'll see the most important inputs as determinants of attrition: 
+                  <img src="framework/img/workshop/most-important-variables.png" alt="most important variables chart" class="medium-image">
+                    - <img src="framework/img/workshop/training-test-sets.png" alt="testing vs training data" width="30%" style="display:block; float: right;"> And you will also see a breakdown of how the data was split between training data and testing data. Remember, the training data is given to the computer with labeled outcomes (the attrition column), and the testing data is given without outcomes so that we can test how good the model is at predicting attrition.
+                  2. Now, let's click on the model to explore it even further! 
+                
 
-                                              <li>Precision, Recall</li>
-                                              <li>F-score: Harmonic mean of precision and recall</li>
-                                              </ul>
-                                              <h2>Regression Metrics:</h2>
-                                              <ul>
-                                              <li>Mean Absolute Error</li>
-                                              <li>Mean Squared Error</li>
-                                          </ul>
+                </script>
+              </section>
+              <section class="slide" data-markdown>
+                <script type="text/template">
+                  # Class Exercise cont'd: Evaluating the Model
+                  1. <img style="display:block; width: 50%; float: right;" src="framework/img/workshop/decision-tree.png" alt="decision tree"> Once inside our Model we can explore a detailed report of our machine's predictions. First, under the Interpretation menu, take a look at the Decision Tree. You can literally see how the machine made its decisions in the decision tree. 
 
-                                            </td>
-                                            <td class="td--half"><img src="framework/img/workshop/relevant-elements-graph.png" alt="relevant elements"></td>
-                                          </tr>
-                                        </table>
-                                      </script>
-                                    </section>
-                                        <section class="slide" data-markdown>
-                                          <script type="text/template">
-                                            # Understanding performance/quality objectives
+                  2. <img style="display:block; margin-right: 10px; width: 70%; float: left;" src="framework/img/workshop/variables-bars.png" alt="decision tree">In the **Variables Importance** bar graph we can see a detailed breakdown of each of the columns used and their importance in predicting attrition.
+                  
+                  3. If you click on **Features** under "Model Information", you can see which columns were included as inputs and which ones turned out to be rejected because they were irrelevant. 
 
-                                            Recognizing that perfect performance is rarely, if ever, possible
-                                             
-                                            Performance objectives should be defined based on the end goal for the model that you are building
-                                            
-                                            For example, the goal for our HR analysis is to predict which valuable employees will leave next
-                                            and give them offers of promotion/raise or any other incentive before they find another job
-                                             
-                                            Understanding the error tolerance is a critical step in identifying the risks in every model prediction
+                  <img style="display:block;" src="framework/img/workshop/rejected-input.png" alt="decision tree">
 
-                                            For example, the risk of false negatives in diagnosing cancer vs marketing recommendation engine
+                  Are there any features we should also leave out as inputs? Take a look at the Variable Importance chart again.
+                </script>
+              </section>
 
-                                            In our HR analysis use-case to predict attrition for each employee, which of false negative and false positive are more risky?
+              <section class="slide" data-markdown>
+                <script type="text/template">
+                  #Class Exercise Cont'd: Evaluating our Model
 
-                                          </script>
-                                        </section>
+                  Now we'll explore the performance report of our model and then compare these results after changing a few key settings before training the machine again. 
+
+                  - First we'll examine the classification accuracy of the predictions by observing the **Confusion Matrix**. 
+                    
+                  <img src="framework/img/workshop/confusion-matrix.png" alt="confusion matrix">
+
+                  - Then, you'll see a bar graph showing another four markers of performance: **Precision**, **Recall**, **F1-Score** an **Accuracy**. Dataiku even gives us four handy definitions in the sidebar to the right. 
+                  
+                  <img src="framework/img/workshop/perf-markers.png" alt="performance markers">
+
+- You'll also see the Cost Matrix which enables you to evaluate the amount earned per correct prediction.
+
+<img src="framework/img/workshop/cost-matrix.png" alt="performance markers">
+
+All of these performance metrics can be improved if we run our learning algorithms again and make some amendments beforehand. 
+
+                </script>
+              </section>
+<section class="slide" data-markdown>
+  <script type="text/template">
+    # Understanding performance/quality objectives
+
+    Recognizing that perfect performance is rarely, if ever, possible
+     
+    Performance objectives should be defined based on the end goal for the model that you are building
+    
+    For example, the goal for our HR analysis is to predict which valuable employees will leave next
+    and give them offers of promotion/raise or any other incentive before they find another job
+     
+    Understanding the error tolerance is a critical step in identifying the risks in every model prediction
+
+    For example, the risk of false negatives in diagnosing cancer vs marketing recommendation engine
+
+    In our HR analysis use-case to predict attrition for each employee, which of false negative and false positive are more risky?
+
+  </script>
+</section>
+<section class="slide" data-markdown>
+<script type="text/template">
+# Exercise: Change the training settings (10 mins)
+
+Now we'll let you change the training settings to determine which inputs and algorithms might give you the best results.
+
+1. Go back to the Models list. 
+2. Select "Settings" in the upper right hand corner.
+3. Try removing any of the "features" that you have discovered are not really relevant. (e.g. Gender).
+4. Go to Algorithms and enable the Random Forest algorithm and the XGBoost algorithms. Both of these will use multiple decision trees to optimize predictions. 
+5. Click on Train again to run your amended algorithms.
+5. Back in the Models list, can you figure out which of your modes is best? Be sure to look at each of the reports. For a quick decision take a look at the ![roc-auc](framework/img/workshop/roc-auc.png). Which model will you choose? 
+
+</script>
+</section>
+                                        
     <section class="slide" data-markdown>
       <script type="text/template">
         # Improving Results
@@ -971,52 +1025,12 @@ Think about all the amazing apps that already make our lives better thanks to da
         ![human in the loop](framework/img/workshop/human-in-loop.png)
       </script>
     </section>
-        <section class="slide" data-markdown>
-          <script type="text/template">
-          # Machine Learning Exercise 
-
-            Find out which columns can be used as expected output  
-
-            Find out which columns in the table would be suitable inputs for our machine learning algorithm.
-            
-            ![img](framework/img/workshop/ml-algo.png)
-
-            We need to choose which inputs we will use for our learning, and what the expected output is.
-
-          </script>
-        </section>
-            <section class="slide" data-markdown>
-              <script type="text/template">
-                # Class Exercise: Dataiku - Machine Learning
-<ol>
-  <li>
-  <p>Back in our Machine Learning Project we left off at a cleaned table. Next we'll go to a new place: the Lab</p>
-  <p>Here we'll want to select "Prepare data and build models in the Visual Analysis option. We'll do python later. <img src="framework/img/workshop/ml-ex/Prepare-data-an-build-models.png" alt="buiod model"></p></li>
-  <li><p>Right click on the column that you want to predict and select "Create prediction model"</p>
-  <img src="framework/img/workshop/ml-ex/create-prediction-model.png" alt="build models">
-  </li>
-  <li></li>
-  <li>Start with Decision Tree as it has the best interpretability</li>
-  <li>Press the green Train button. <img src="framework/img/workshop/ml-ex/lab-step-one.gif" alt="1-4"></li>
-  <li>Check the performance and importance of different features</li>
-  <li>Go to setting</li>
-  <li>Review evaluation process, features set</li>
-  <li>Go to algorithms and choose XGBOOST and Random Forest</li>
-  <li>Train new models</li>
-  <li>Review their performance and importance of features and choose the best model</li>
-</ol>
-
-
-<img src="framework/img/workshop/ml-ex/run-other-algos.gif" alt="1-4">
-                   
-
-              </script>
-            </section>
+       
              <section class="slide" data-toc data-markdown>
               <script type="text/template">
                 # Ethical problems of AI
                 
-                Did you notice in our dataset that there's a gender column? Was that a relevant column for determining attrition of employees? What about employees that are non-binary? Where will they fall? 
+                Remember the gender column in our dataset? Was that a relevant column for determining attrition of employees? What about employees that are non-binary? Where will they fall? 
 
                 Here are a few more ethical dilemmas we need to deal with in AI
 
@@ -1056,25 +1070,32 @@ Think about all the amazing apps that already make our lives better thanks to da
                    # Probability vs. Certainty
                  </script>
                </section>
+            <section class="slide" data-markdown>
+              <script type="text/template">
+              # Discussion! (15 minutes)
+
+              In groups of 4 discuss the following: 
+              
+              ## Problem 1
+              1. If tomorrow you heard that Uber's new self-driving car had crashed and killed its passengers, would you volunteer to be the next passenger? 
+
+              1. If you answered No, would you answer change if the cost of riding in the self-driving Uber was much lower than if you ordered a human driver?
+
+              1. If you answered No, would your answer change if you knew that human drivers have a higher probability of crashing than self-driving cars?
+              
+              ## Problem 2
+
+              1. After going to the doctor, she tells you that based on your AI results, it's 60% likely that you have a deadly disease. When you ask for human confirmation of the certainty of the results, the doctor tells you the AI is much better at predicting cancer than she would be with old-fashioned diagnostic methods. 
+                a. Would you accept treatment for your disease? 
+                b. Would you wait for a higher probability/more certainty before deciding on treatment? 
+          
+              </script>
+            </section>
                 <section class="slide" data-markdown>
                   <script type="text/template">
-                  # Discussion! (15 minutes)
+                    # Probability or Certainty?
 
-                  In groups of 4 discuss the following: 
-                  
-                  ## Problem 1
-                  1. If tomorrow you heard that Uber's new self-driving car had crashed and killed its passengers, would you volunteer to be the next passenger? 
-
-                  1. If you answered No, would you answer change if the cost of riding in the self-driving Uber was much lower than if you ordered a human driver?
-
-                  1. If you answered No, would your answer change if you knew that human drivers have a higher probability of crashing than self-driving cars?
-                  
-                  ## Problem 2
-
-                  1. After going to the doctor, she tells you that based on your AI results, it's 60% likely that you have a deadly disease. When you ask for human confirmation of the certainty of the results, the doctor tells you the AI is much better at predicting cancer than she would be with old-fashioned diagnostic methods. 
-                    a. Would you accept treatment for your disease? 
-                    b. Would you wait for a higher probability/more certainty before deciding on treatment? 
-              
+                    Based on your group discussions, do you think you're ready to live in a world where probability is the basis of most decisions, or do you still crave certainty? 
                   </script>
                 </section>
             <section class="slide title" data-markdown>
@@ -1094,7 +1115,12 @@ Think about all the amazing apps that already make our lives better thanks to da
                   6. What have you learned from your dataset? 
                 </script>
               </section>
-                      
+                          <section class="slide title" data-markdown>
+                            <script type="text/template">
+                              # We did it!!
+                            ## Now it's demo time! 
+                            </script>
+                          </section>
                         
                         
                             

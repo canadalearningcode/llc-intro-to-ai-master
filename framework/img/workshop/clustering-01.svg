@@ -10,7 +10,7 @@
 	.st4{font-size:36px;}
 	.st5{font-size:17px;}
 	.st6{fill:#93278F;}
-	.st7{fill:#00FFFF;}
+	.st7{fill:#43BC0A;}
 	.st8{fill:#9B989B;}
 </style>
 <g id="Layer_2">
@@ -28,14 +28,12 @@
 	<text transform="matrix(1 0 0 1 1205.3842 82.2036)" class="st2 st3 st4">Clustered Data</text>
 	<rect x="155.2" y="55.2" class="st1" width="621.3" height="46.7"/>
 	<text transform="matrix(1 0 0 1 155.2291 81.8779)" class="st2 st3 st4">All the people using the internet</text>
-	<g>
-		<rect x="1060.4" y="590.4" class="st1" width="562.7" height="17.8"/>
-		<text transform="matrix(1 0 0 1 1060.3768 603.0303)" class="st3 st5">People using the internet abnormally/potential hackers</text>
-		<rect x="1060.4" y="560" class="st1" width="344" height="13.3"/>
-		<text transform="matrix(1 0 0 1 1060.3768 572.614)" class="st3 st5">People using the internet regularly</text>
-		<circle class="st6" cx="1035.7" cy="566.2" r="10"/>
-		<circle class="st7" cx="1035.7" cy="596.7" r="10"/>
-	</g>
+	<rect x="1060.4" y="590.4" class="st1" width="562.7" height="17.8"/>
+	<text transform="matrix(1 0 0 1 1060.3768 603.0303)" class="st3 st5">People using the internet abnormally/potential hackers</text>
+	<rect x="1060.4" y="560" class="st1" width="344" height="13.3"/>
+	<text transform="matrix(1 0 0 1 1060.3768 572.614)" class="st3 st5">People using the internet regularly</text>
+	<circle class="st6" cx="1035.7" cy="566.2" r="10"/>
+	<circle class="st7" cx="1035.7" cy="596.7" r="10"/>
 	<circle class="st8" cx="720.2" cy="405.7" r="11.3"/>
 	<circle class="st8" cx="704.7" cy="433.7" r="11.3"/>
 	<circle class="st8" cx="735.7" cy="445" r="11.3"/>
