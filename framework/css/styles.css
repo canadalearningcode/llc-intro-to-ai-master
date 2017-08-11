@@ -630,11 +630,12 @@ p {
 img.medium-image {
   width: 40%; }
 
-.ai-history {
+section.slide.title.ai-history {
+  background-image: url("../img/workshop/spongebob.gif");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center; }
-  .ai-history h1 {
+  background-size: contain;
+  background-position: 50% 50%; }
+  section.slide.title.ai-history h1 {
     color: white; }
 
 section.slide.title.data-everything {
