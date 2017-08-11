@@ -67,7 +67,26 @@ img.medium-image {
 }
 
 .ai-history {
-		background-repeat: no-repeat;
-	background-size: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
 	background-position: center center;
+	h1 {
+		color: white
+	}
+}
+
+section.slide.title.data-everything {
+	background-image: url('../img/workshop/jlaw-everything.gif');
+	background-repeat: no-repeat;
+	background-size: 80%;
+	background-position: center center;
+}
+section.slide.title.didit {
+	background-image: url('../img/workshop/serena-queen.gif');
+	background-repeat: no-repeat;
+	background-size: 60%;
+	background-position: center center;
+	h1 {
+		color: white;
+	}
 }
