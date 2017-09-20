@@ -929,7 +929,7 @@ Think about all the amazing apps that already make our lives better thanks to da
                             Now, let's get back to our challenge of figuring out who might leave their job next at IBM so we can stop attrition in its tracks. 
 
                             1. We’re going to create another project. Click on the plus sign on the left hand side of the DataIku dashboard. Let’s call it “Machine Learning Project”
-                            1. Click on Import Dataset. From the exercise-files folder choose the ibm-dataset-emergency-file.zip file. It looks like a zip file but when you upload it it will become csv. 
+                            1. Click on Import Dataset. From the exercise-files folder choose the IBM HR Analytics Employee Attrition & Performance file. It looks like a zip file but when you upload it it will become csv. 
                             1. Click on the create button to finalize the import. 
                             1. Ensure that all of the column names have been imported properly. 
                             1. Ensure that all data-types have been identified correctly. **Tip:** There is a mistake on one of the columns! Here's a clue: ![clue](framework/img/workshop/clue.png)
@@ -1049,10 +1049,6 @@ Now we'll explore the performance report of our model and then compare these res
 
 The confusion matrix is going to prove very handy for us to determine which model we'll go with in the end. It enables us to see how many times the model predicted false positives and how many times false negatives. In other words, we can see in the table above that there were 25 times that the model predicted an employee would not quit their job at IBM, and 35 times that it predicted they would quit when in fact they wouldn't. 
 
-If the problem we're trying to solve for HR is to capture the people who will leave IBM before they do, so that we can make them stay, what's more risky for us? A false positive or a false negative? 
-
-That's right false negatives are more risky because there are 25 people who will leave IBM that we didn't capture. 
-
 - Then, you'll see a bar graph showing another markers of performance: **Precision**, **Recall**, **F1-Score** an **Accuracy**. Dataiku even gives us four handy definitions in the sidebar to the right. 
 
 <img src="framework/img/workshop/perf-markers.png" alt="performance markers">
@@ -1087,7 +1083,10 @@ Understanding the error tolerance is a critical step in identifying the risks in
 
 For example, the risk of false negatives in diagnosing cancer vs marketing recommendation engine
 
-In our HR analysis use-case to predict attrition for each employee, which of false negative and false positive are more risky?
+In our HR analysis use-case to predict attrition for each employee, **which of false negative and false positive are more risky?**
+
+<p class="delayed">That's right false negatives are more risky because there are people who will leave IBM that we wouldn't capture. </p>
+
 
   </script>
 </section>
