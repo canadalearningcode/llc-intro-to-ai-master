@@ -162,7 +162,7 @@
             <br style="clear:both;margin-top: 50px;">
             <br style="clear:both;margin-top: 50px;">
             <img src="framework/img/workshop/amazon-logo_transparent.png" alt="amazon" width="150" style="float:left;  margin-right: 30px">
-            **Amazon** uses AI in its recommendation engine.                                                                                                                                                                                                                                                                                                                                                                                               
+            **Amazon** uses AI in its recommendation engine. 
 
           </script>
         </section>
@@ -638,7 +638,7 @@ Think about all the amazing apps that already make our lives better thanks to da
                   1. Once you click create, you should be sent directly the table of data with the exploration menu at the top. If not, click on the “Data sets” icon from the dashboard. 
                   1. The dataset should open and enable you to explore using the exploration menu above it. 
                   1. On the menu above it click on "Explore" ![data dashboard menu](framework/img/workshop/explore-menu.png)
-                  1. In the Explore tab you can see all of your data in table format. In the top row you’ll see that every single column is first recognized as a string. This is because all CSV file values are stored as strings. Below the String you’ll see the actual data type DataIku will recognize for each of your columns. Are they all correct? Check against the data type definitions we talked about eariler. 
+                  1. In the Explore tab you can see all of your data in table format. In the top row you’ll see that every single column is first recognized as a string. This is because all CSV file values are stored as strings. Below the String you’ll see the actual data type Dataiku will recognize for each of your columns. Are they all correct? Check against the data type definitions we talked about eariler. 
                   1. Create a chart! If you go into the Charts tab you can start playing around with some data visualization! The default chart is a Histogram Bar Graph. You can change the type of graph you want by clicking on the graph-type dropdown. ![graph-dropdown](framework/img/workshop/graph-type-dropdown.png)
                   1. You’ll notice that some chart fields can only be filled with numerical columns. For instance, the Y column of your bar graph, must be a numerical data type for it to work. Play around with the columns and charts and see if there's any correlation between them! Have fun! 
                   ![show by](framework/img/workshop/X-Y-VALUES.png)
@@ -929,11 +929,11 @@ Think about all the amazing apps that already make our lives better thanks to da
                             
                             Now, let's get back to our challenge of figuring out who might leave their job next at IBM so we can stop attrition in its tracks. 
 
-                            1. We’re going to create another project. Click on the plus sign on the left hand side of the DataIku dashboard. Let’s call it “Machine Learning Project”
+                            1. We’re going to create another project. Click on the plus sign on the left hand side of the Dataiku dashboard. Let’s call it “Machine Learning Project”
                             1. Click on Import Dataset. From the exercise-files folder choose the IBM HR Analytics Employee Attrition & Performance file. It looks like a zip file but when you upload it it will become csv. 
                             1. Click on the create button to finalize the import. 
                             1. Ensure that all of the column names have been imported properly. 
-                            1. Ensure that all data-types have been identified correctly. **Tip:** There is a mistake on one of the columns! Here's a clue: ![clue](framework/img/workshop/clue.png)
+                            1. Ensure that all data types have been identified correctly. **Tip:** There is a mistake on one of the columns! Here's a clue: ![clue](framework/img/workshop/clue.png)
 
     
 
@@ -968,10 +968,10 @@ Think about all the amazing apps that already make our lives better thanks to da
                                     ## How to evaluate the quality of a learned model?
 
                                     - The data is split into two subsets:
-                                         1. A training and validation set used only to find the right function predicator
+                                         1. A training and validation set used only to find the right predictor function
                                          2. A test set is used to report the prediction error of the model
-                                    - These sets must be disjoint!
-                                    - Normally, we use 70% of the data as a Training and validation set and the rest as a test set
+                                    - These sets must be distinct!
+                                    - Normally, we use 70% of the data as a training and validation set and the rest as a test set
                                     - In case of having smaller datasets, we use cross-validation
 
                                   </script>
@@ -1084,7 +1084,7 @@ Understanding the error tolerance is a critical step in identifying the risks in
 
 For example, the risk of false negatives in diagnosing cancer vs marketing recommendation engine
 
-In our HR analysis use-case to predict attrition for each employee, **which of false negative and false positive are more risky?**
+In our HR analysis case, to predict attrition for each employee, **which of false negative and false positive is more risky?**
 
 <p class="delayed">That's right false negatives are more risky because there are people who will leave IBM that we wouldn't capture. </p>
 
@@ -1108,7 +1108,7 @@ Now we'll let you change the training settings to determine which inputs and alg
 5. Back in the Models list, select the table view
 ![models table](framework/img/workshop/modelstable.png)
 
-You'll see in the table view that it's easier to compare our confusion matrix markers a lot easier. Including the F1 Score that we decided we'd rely on to choose our model. 
+You'll see in the table view that it's easier to compare our confusion matrix metrics, including the F1 Score that we decided we'd rely on to choose our model. 
 
 By these metrics, XGBoost seems to be the best performing algorithm. Let's go ahead and select the XGBoost model by clicking on it. Then, select **Deploy** from the upper right hand corner above the report. 
 
@@ -1133,7 +1133,7 @@ We fed it to dataiku and it was used to train the model. If we click on the pred
   
   Before we can apply the model on new data, we'll need to import a new dataset. Go ahead and click on the +Dataset button ![+dataset](framework/img/workshop/plusdataset.png) above the workflow to import the no-attrition-column-set csv file from your exercise-files folder. 
   
-  Next, return to the workflow view and let's go ahead and click on the Score cup to to test our prediction model. 
+  Next, return to the workflow view and let's go ahead and click on the Score cup to test our prediction model. 
 
   ![workflow score gif](framework/img/workshop/workflowscoregif.gif)
 
@@ -1161,7 +1161,7 @@ We can find a hypothesis that predicts perfectly the training data but does not 
 
 ## Underfitting
 
-- Typical underfitting means that error on the training data is very high
+- Typically, underfitting means that error on the training data is very high
 
 
     </script>
@@ -1190,10 +1190,10 @@ If the model is not confident in any of its predictions on the instances in our 
 
                 1. Unemployment as a result of smart machines taking over jobs.
                 2. Bias in Models: Racist and Sexist Models
-                  - Remember all Ai models have been trained by human behavioural data, so they have inherited all our values and biases
+                  - Remember all AI models have been trained by human behavioural data, so they have inherited all our values and biases
                   - A study showed that human sequential bias can be found with loan officers approving or denying loan applications.
                 3. Error of the models in production
-                4. Model Black Box: Non-interpretable models - this is typical in deep learning where we may not be able to understand, as humans, how the computer came to the outcome that it did. 
+                4. Black Box Models: Non-interpretable models - this is typical in deep learning where we may not be able to understand, as humans, how the computer came to the outcome that it did. 
                
 
                 <hr>
@@ -1274,10 +1274,10 @@ If the model is not confident in any of its predictions on the instances in our 
                                     
                                     ## Learn More: 
 
-                                    - [Udacity](https://www.udacity.com/ai) - checkout the nanodegress in AI, Machine Learning and Deep Learning at Udacity. They also have lots of introductory courses on this platform. 
-                                    - [Machine Learning A-Z at Udemy](https://www.udemy.com/machinelearning/learn/v4/overview) This is a great introduction to ML with big emphasis on Python. 
+                                    - [Udacity](https://www.udacity.com/ai) - checkout the nanodegrees in AI, Machine Learning and Deep Learning at Udacity. They also have lots of introductory courses on this platform
+                                    - [Machine Learning A-Z at Udemy](https://www.udemy.com/machinelearning/learn/v4/overview) This is a great introduction to ML with a big emphasis on Python
                                     - [Machine Learning with Andrew Ng on Coursera](https://www.coursera.org/learn/machine-learning)
-                                    - Want to wrap your mind around Data Science more generally? Checkout this excellent review on the [best Data Science courses online](https://medium.freecodecamp.org/i-ranked-all-the-best-data-science-intro-courses-based-on-thousands-of-data-points-db5dc7e3eb8e)
+                                    - Want to wrap your mind around Data Science more generally? Check out this excellent review on the [best Data Science courses online](https://medium.freecodecamp.org/i-ranked-all-the-best-data-science-intro-courses-based-on-thousands-of-data-points-db5dc7e3eb8e)
   
                                     ## Continue experimenting with datasets: 
 
@@ -1286,9 +1286,9 @@ If the model is not confident in any of its predictions on the instances in our 
                                     
                                     ## Keep Reading: 
 
-                                    - [Free Code Camp](https://medium.freecodecamp.org/tagged/data-science) Free Code Camp has a blog dedicated to data-science where articles about upcoming courses in AI will come up. 
+                                    - [Free Code Camp](https://medium.freecodecamp.org/tagged/data-science) Free Code Camp has a blog dedicated to data science where articles about upcoming courses in AI will come up
                                     - Keep reading [Kathryn Hume's blog](https://quamproxime.com/) for fascinating analysis of the growing AI field
-                                    - [Georgian Partners](https://georgianpartners.com/blog-archive/) in Toronto is a leader in Artificial Intelligence and publishes lots of great posts on their blog. 
+                                    - [Georgian Partners](https://georgianpartners.com/blog-archive/) in Toronto is a leader in Artificial Intelligence and publishes lots of great posts on their blog 
                                     - The Brookfield Institute for Innovation + Entrepreneurship recently released a report: [Automation Across the Nation: Understanding the potential impacts of technological trends across Canada](http://brookfieldinstitute.ca/research-analysis/automation-across-the-nation-understanding-distribution-automation-susceptibility-across-canada/)
 
                                     ## Listen 
@@ -1298,7 +1298,7 @@ If the model is not confident in any of its predictions on the instances in our 
                                     - [Other Podcasts on AI](https://medium.com/startup-grind/the-10-best-ai-data-science-and-machine-learning-podcasts-d7495cfb127c)
 
                                     ## Participate 
-                                    - [Tech2025](http://tech2025.com) organizes in-person events to discuss issues of technology and the future, including AI. It launched in Toronto in July 2017. 
+                                    - [Tech2025](http://tech2025.com) organizes in-person events to discuss issues of technology and the future, including AI. It launched in Toronto in July 2017
                                   </script>
                                 </section>
                                 <section class="slide title" data-markdown>
@@ -1320,15 +1320,15 @@ If the model is not confident in any of its predictions on the instances in our 
 
                         So far we've worked with a Graphical User Interface on Dataiku. This is what you would have to do to accomplish the same thing using just Python code: 
 
-                        1. Using sklearn platform.
-                        1. Loading the dataset
+                        1. Use the sklearn platform.
+                        1. Load the dataset
                         1. Initial Preprocessing of the data
-                        1. Creating Training and Test sets
-                        1. Preprocessing: Filling missing values, Handling Categorical Features, Normalizing numerical Features
+                        1. Create Training and Test sets
+                        1. Preprocessing: Fill missing values, Handle Categorical Features, Normalize numerical Features
                         1. Choose the Classifier mode
                         1. Train a Classifier using train set
                         1. Evaluate the learned model
-                        1. Making some predictions
+                        1. Make some predictions
 
                         This probably seems like a lot! Let's look at the code.
 
@@ -1350,10 +1350,10 @@ If the model is not confident in any of its predictions on the instances in our 
 
                         In this exercise you will manipulate the code inside Jupyter using the Python sklearn library documentation. 
 
-                        1. Switch the Random Forest classifier model to use Logistic Regression. **Hot Tip**: Refer to the [documentation](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)
+                        1. Switch the Random Forest classifier model to use Logistic Regression(LR). **Hot Tip**: Refer to the [documentation](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)
                         2. Train and test the new model - does the result improve? 
-                        3. Change the evaluation metric to have F-score. Again, use the [documentation for f-score](http://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html
-                        4. Change the parameters of the LR classifier like solver, Regularization penalty, inverse of regularization strength C and investigate the effect of these changes in the performance of the model. (Reference to these parameters are in the first documentation link at #1)
+                        3. Change the evaluation metric to have F-score. Again, use the [documentation for f-score](http://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html)
+                        4. Change the parameters of the LR classifier like solver, regularization penalty, *and* inverse of regularization strength *(C),* and investigate the effect of these changes in the performance of the model.
 )
                       </script>
                     </section>
