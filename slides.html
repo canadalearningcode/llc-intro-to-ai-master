@@ -1068,7 +1068,7 @@ The confusion matrix is going to prove very handy for us to determine which mode
 
 **Accuracy** is the proportion of overall correct positive and negative predictions in the sample. And while it may be tempting to use this metric to choose our model, it's not the best marker. Imagine that in our dataset 90% of all employees did not leave IBM and 10% did. And then imagine that the model predicts that 100% of the employees stayed. This would mean that model would have an accuracy of 90% which seems really good, except it would have missed every single person that actually quit IBM. So, accuracy is not the right evaluation metric in this case
 
-**Precision** is the number of true positives divided by the total number of instances predicted as positive”. 
+**Precision** is the number of true positives divided by the total number of instances predicted as positive. 
 
 **Recall** gives us the proportion of "positive"  actual records correctly predicted as positive.
 
@@ -1112,7 +1112,7 @@ In our HR analysis case, to predict attrition for each employee, **which of fals
 
 Now we'll let you change the training settings to determine which inputs and algorithms might give you the best results.
 
-1. Go back to the Models list. 
+1. Go back to the Models list. *If you've gotten lost, click the Analyses icon in the top left (the circle, will turn green), select your analysis, and then the Models tab on the right.*
 2. Select "Settings" in the upper right hand corner.
 3. Try removing any of the "features" that you have discovered are not really relevant. (e.g. Gender).
 4. Go to Algorithms and enable the Random Forest algorithm and the XGBoost algorithms. Both of these will use multiple decision trees to optimize predictions. 
