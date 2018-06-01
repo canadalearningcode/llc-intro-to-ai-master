@@ -38,10 +38,10 @@
       
       <div class="instructions">
         <!-- ADD WIFI INFO HERE -->
-        <!-- <h2>Get Connected</h2>
+        <h2>Get Connected</h2>
         <p><strong>Wifi:</strong>Network Name</p>
         <p><strong>Password:</strong>Password</p>
-        <hr> -->
+        <hr>
         
         <h2>Download<br> & Install</h2>
         <ol class="downloads">
@@ -51,9 +51,10 @@
               <li>open <em>slides.html</em> in the browser to view the slides</li>
             </ul>
           </li>
-          <li>Dataiku: <a href="https://www.dataiku.com/">https://www.dataiku.com/</a> <strong>A very special thanks to Amazon (AWS) for generously hosting all instances of dataiku today!</strong> </li>
           <li>Chrome Browser: <a href="https://www.google.ca/chrome/browser/desktop/">https://www.google.ca/chrome</a></li>
-          </li>
+          <li>Dataiku: <a href="https://www.dataiku.com/">https://www.dataiku.com/</a> <strong>We will be using an online version so you do not need to install</strong> </li>
+          
+          
         </ol>
       </div>
       <footer>
@@ -70,13 +71,13 @@
       </h1>
       
       <!-- FILL IN INSTRUCTOR DETAILS -->
-      <!-- <img class="instructor" src="framework/img/workshop/Parinaz.jpg" alt="Instructor Name">
-      <h2><span class="cursive">with</span> Instructor Name</h2>  
+      <!--<img class="instructor" src="framework/img/workshop/Parinaz.jpg" alt="Instructor Name">-->
+      <h2><span class="cursive">with</span> Lisa Gaudette</h2>  
       <ul>
-        <li><a href="mailto:">hello@email.com</a></li>
-        <li><a href="http://yourwebsite.com">http://yourwebsite.com</a></li>
-        <li><a href="http://twitter.com/your-twitter-handle-here">@instructor-handle</a></li>
-      </ul> -->
+        <li><a href="mailto:">lisa.gaudette@gmail.com</a></li>
+        <li><a href="http://yourwebsite.com">http://lgaud.github.io</a></li>
+        <li><a href="http://twitter.com/your-twitter-handle-here">@lisa_gaud</a></li>
+      </ul>
       
       <div class="sponsor">
         <p>In partnership with <br> <img src="framework/img/logo-accenture.svg" alt="Accenture"></p>
@@ -535,20 +536,14 @@ Think about all the amazing apps that already make our lives better thanks to da
               <script type="text/template">
 # Online Option
 
-To Connect to Dataiku you will need to go to the unique URL that was sent to your Instructor or Chapter Lead via e-mail. 
+To Connect to Dataiku you will need to go to http://bit.ly/ai-ottawa 
 
-Then you will login using a unique username and password assigned to you based on a number. 
+- Login: admin
+- Password: admin 
 
-Your username will be **miss#** and your password will be identical to the username. 
+And hit Log in
 
-E.G. If your assigned number is 41, Your username will be **miss41** and your password will be **miss41**
-
-In some cases you'll notice more than one student using the same dataiku platform. For this reason be sure to save all your projects in Dataiku with your name so that you can identify them better when you work in the platform. 
-
-If your unique URL or username and password don't work a mentor, instructor or chapter lead will help you. 
-
-A HUGE Thanks to the team at Dataiku and in particular Joel Belafa from Dataiku who helped us set everything up for #llcCodeDay! 
-
+**Because we are all using the same account, name your projects with FirstnameLastname**
 
               </script>
             </section>
@@ -629,7 +624,7 @@ A HUGE Thanks to the team at Dataiku and in particular Joel Belafa from Dataiku 
 
               1. Go to the Dataiku Dashboard. 
               1. Select the plus sign on the left hand corner to create a new project. ![new project](framework/img/workshop/new-project-plus.png)
-              1. Give your project a name. E.g. “My first Data project”
+              1. Give your project a name. E.g. “My first Data project” (**Start it with FirstnameLastname!**)
               ![project name](framework/img/workshop/new_project_name.png)
               1. Import your first dataset. (this is the CSV file we created in Google Sheets) ![import button](framework/img/workshop/import-first-dataset.png)
               1. There are lots of ways to import datasets. We want to click on “Upload Files” under “Files”. 
@@ -656,8 +651,8 @@ A HUGE Thanks to the team at Dataiku and in particular Joel Belafa from Dataiku 
                   ![show by](framework/img/workshop/X-Y-VALUES.png)
                   1. Bonus: Experiment with some of the geographical charts and your longitude and latitude columns! See if you can map everyone's favourite colour by location! 
                     1. Head on back to the explore tab to see the table again. 
-                    1. From the Actions dropdown in the upper right hand corner, select Prepare again. 
-                    1. In the scripts are to the left of the table, click on "Add a step".
+                    1. From the Actions dropdown in the upper right hand corner, select Prepare again (under "Visual Recipes"), then hit "Create Recipe". 
+                    1. In the scripts area to the left of the table, click on the yellow "Add a new step" button.
                     1. Select the geography checkbox ![geography checkbox](framework/img/workshop/geocheckbox.png)
                     1. Select “create geopoint from lat/lon ![geopoint](framework/img/workshop/create-geo-point.png)
                     1. Fill in the longitude and latitude inputs with their respective columns and give a name to the new geopoint column. ![create geopoint](framework/img/workshop/geopoint.png)
@@ -725,7 +720,7 @@ A HUGE Thanks to the team at Dataiku and in particular Joel Belafa from Dataiku 
                               A single object of the world from which a model will be learned, or on which a model will be used. Instances are described by feature vectors.
                                
                               ## Attribute (field, variable, feature)
-                              A quantity describing an instance. An attribute has a domain defined by the attribute type, which denotes the values that can be taken by an attribute. A feature is the specification of an attribute and its value. For example, color is an attribute. ``Color is blue'' is a feature of an example.
+                              A quantity describing an instance. An attribute has a domain defined by the attribute type, which denotes the values that can be taken by an attribute. A feature is the specification of an attribute and its value. For example, color is an attribute. “Color is blue” is a feature of an example.
                               
                               The following domain types are common:
                               
@@ -758,9 +753,9 @@ A HUGE Thanks to the team at Dataiku and in particular Joel Belafa from Dataiku 
                                   # What are the types of learning approaches? 
 
                                   - **Supervised**: Learn rules that map inputs to target outputs.
+                                    - **Deep** learn through a hierarchy of simple to complex concepts.
                                   - **Unsupervised**: Learn to cluster and label similar inputs.
-                                  - **Deep** learn through a hierarchy of simple to complex concepts.
-                                  - **Reinforced**: Learn by continually interacting with an environment.
+                                  - **Reinforcement**: Learn by continually interacting with an environment.
 
                                   <img width="50%;" src="framework/img/workshop/urkel.gif" alt="Urkel">
                                 </script>
@@ -1068,7 +1063,7 @@ The confusion matrix is going to prove very handy for us to determine which mode
 
 **Accuracy** is the proportion of overall correct positive and negative predictions in the sample. And while it may be tempting to use this metric to choose our model, it's not the best marker. Imagine that in our dataset 90% of all employees did not leave IBM and 10% did. And then imagine that the model predicts that 100% of the employees stayed. This would mean that model would have an accuracy of 90% which seems really good, except it would have missed every single person that actually quit IBM. So, accuracy is not the right evaluation metric in this case
 
-**Precision** is the number of true positives divided by the total number of instances predicted as positive”. 
+**Precision** is the number of true positives divided by the total number of instances predicted as positive. 
 
 **Recall** gives us the proportion of "positive"  actual records correctly predicted as positive.
 
@@ -1112,7 +1107,7 @@ In our HR analysis case, to predict attrition for each employee, **which of fals
 
 Now we'll let you change the training settings to determine which inputs and algorithms might give you the best results.
 
-1. Go back to the Models list. 
+1. Go back to the Models list. *If you've gotten lost, click the Analyses icon in the top left (the circle, will turn green), select your analysis, and then the Models tab on the right.*
 2. Select "Settings" in the upper right hand corner.
 3. Try removing any of the "features" that you have discovered are not really relevant. (e.g. Gender).
 4. Go to Algorithms and enable the Random Forest algorithm and the XGBoost algorithms. Both of these will use multiple decision trees to optimize predictions. 
@@ -1262,12 +1257,12 @@ If the model is not confident in any of its predictions on the instances in our 
               <section class="slide" data-markdown>
                 <script type="text/template">
                 # Final Exercise (20 minutes or as long you want)
-                  1. Working in teams of 4 or by yourself, think of an issue that is important to you (e.g. climate change, the refugee crisis, cancer) OR think of a problem you're facing at work (e.g. you need to identify donors for your new initiative). Brainstorm ways that Machine Learning may help with the issues you want to solve. 
-                  2. Try to find a dataset related to your issue that you could work with for today. Visit http://kaggle.com or http://opendata.gc.ca for Canadian Government datasets.
-                  3. Create a new project in Dataiku and import your new database. 
-                  4. Clean up your data if needed. 
-                  5. Follow the instructions from our Class Exercise to run a few Machine Learning models on your dataset. 
-                  6. What have you learned from your dataset? 
+                  1. Working in teams of 4 or by yourself, find a dataset that interests you. Check out http://kaggle.com (requires registration; check out the Getting Started competitions or UCI ML), or there are 2 in the examples folder. You want something in a CSV format, with mostly numbers and at least a few hundred examples to learn from.
+                    - The two datasets in the folder along with several others are here: https://www.kaggle.com/uciml/datasets
+                  2. Create a new project in Dataiku and import your new database. 
+                  3. Clean up your data if needed. 
+                  4. Follow the instructions from our Class Exercise to run a few Machine Learning models on your dataset. 
+                  5. What have you learned from your dataset? 
                 </script>
               </section>
                           <section class="didit slide title" data-markdown>
@@ -1289,8 +1284,9 @@ If the model is not confident in any of its predictions on the instances in our 
                                     - [Udacity](https://www.udacity.com/ai) - checkout the nanodegrees in AI, Machine Learning and Deep Learning at Udacity. They also have lots of introductory courses on this platform
                                     - [Machine Learning A-Z at Udemy](https://www.udemy.com/machinelearning/learn/v4/overview) This is a great introduction to ML with a big emphasis on Python
                                     - [Machine Learning with Andrew Ng on Coursera](https://www.coursera.org/learn/machine-learning)
+                                    - [Fast.ai: Practical Deep Learning for Coders](http://course.fast.ai/) 7-week course designed for anyone with at least a year of coding experience, and some memory of high-school math
                                     - Want to wrap your mind around Data Science more generally? Check out this excellent review on the [best Data Science courses online](https://medium.freecodecamp.org/i-ranked-all-the-best-data-science-intro-courses-based-on-thousands-of-data-points-db5dc7e3eb8e)
-  
+                                    
                                     ## Continue experimenting with datasets: 
 
                                     - http://kaggle.com
