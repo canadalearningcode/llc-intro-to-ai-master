@@ -1,4 +1,4 @@
-#Ladies Learning Code slide deck template
+# Ladies Learning Code slide deck template
 
 This slide deck includes features such as incremental display of content, interactive CSS demos built into the slides and markdown integration. View [slides.html](https://github.com/ladieslearningcode/llc-slidedeck-template/blob/master/slides.html) or http://ladieslearningcode.github.io/llc-slidedeck-template/slides.html for details on usage.
 
