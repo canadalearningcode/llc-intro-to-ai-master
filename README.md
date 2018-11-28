@@ -1,15 +1,25 @@
-# Ladies Learning Code slide deck template
+# Ladies Learning Code
+# Introduction to Artificial Intelligence and Machine Learning
 
-This slide deck includes features such as incremental display of content, interactive CSS demos built into the slides and markdown integration. View [slides.html](https://github.com/ladieslearningcode/llc-slidedeck-template/blob/master/slides.html) or http://ladieslearningcode.github.io/llc-slidedeck-template/slides.html for details on usage.
+## Quick Links
 
-This project uses [editorconfig](http://editorconfig.org/) to maintain consistent coding style. Make sure your text editor has an editorconfig [plugin](http://editorconfig.org/#download) installed.
+Preview Slides: https://ladieslearningcode.github.io/llc-intro-to-ai-master/slides.html
 
-**Atom Users:** The Whitespace plugin (which is installed by default) has `Trim trailing whitespace` option turned on by default. Turn this off in the Whitespace plugin settings, otherwise it overwrites the setting in [.editorconfig](.editorconfig). This is a known [issue](https://github.com/sindresorhus/atom-editorconfig/issues/3).  This is not required for workshop attendees, just for those wishing to make updates to the slides.
+## Attributions
+Content created by [Parinaz Sobhani](https://georgianpartners.com/team_member/parinaz-sobhani/) for Canada Learning Code.
 
-Created with <a href="https://github.com/LeaVerou/csss/sample-slideshow.html">Lea Verou's CSS-based SlideShow System</a> and <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>. Syntax highlighting courtesy of http://highlightjs.org. Best viewed in Chrome or Firefox.
+Slide presentation created by Christina Truong for Canada Learning Code.
 
+Email questions & comments to [content@canadalearningcode.ca](mailto:content@canadalearningcode.ca).
 
-This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+If you'd like to contribute to future lesson content development, let us know [here](https://docs.google.com/forms/d/e/1FAIpQLSfJ8NSMKVAmzpdn3EAymxCbDDz3XZPxyDdmtQ87GECuvXzzDQ/viewform).
 
-Created by [Christina Truong](http://twitter.com/christinatruong) for Ladies Learning Code.
-Email questions & comments to <content@ladieslearningcode.com>.
+We're really happy to see others leverage our content in their community - we’ve developed it to be used by others with attribution through a [Creative Commons (CC BY-NC 4.0) license](https://creativecommons.org/licenses/by-nc/4.0/).
+
+Here’s an easy way to attribute content back to us - please include it wherever you use or make reference to our content.
+
+“Please note that this is not a Canada Learning Code affiliated event, but we want to acknowledge the organization for the creation of the content [INSERT LINK TO GITHUB LINK] being delivered under Creative Commons license"
+
+## Contributing
+
+Our general Rule of Thumb is that it's okay to add examples if you feel it could provide more context for your community. However, we ask that instructors do not remove anything, as the content is designed with intention, whether that be meeting specific learning objectives, or maintaining our organization’s culture through the design.  Any suggestions for revisions or updates can be submitted in Github via issues and pull requests. If submitting an issue, please include the slide number(s) in the title.
