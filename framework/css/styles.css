@@ -364,9 +364,9 @@ blockquote {
 .delayed-children > .displayed {
   opacity: 1; }
 
-/* 
+/*
 Background color style for headings
-Use spans wrap inside of a heading for div. 
+Use spans wrap inside of a heading for div.
 e.g.
 <h1 class="title-bg">
   <span>
@@ -656,3 +656,7 @@ section.slide.title.didit {
   width: 100px; }
 
 /*# sourceMappingURL=styles.css.map */
+
+.women-in-ai img {
+  width: 400px;
+}
