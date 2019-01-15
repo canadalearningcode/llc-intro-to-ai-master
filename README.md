@@ -13,7 +13,7 @@ See slide 6 for suggestions on how learners can incorporate this month’s theme
 
 Preview Slides: https://ladieslearningcode.github.io/llc-intro-to-ai-master/slides.html
 
-## Special Note
+## Special Note for Instructors
 
 The dataiku platform will need to be activated ahead of time. If you haven't received a custom bitly link via email already, please let us know at content@canadalearningcode.ca and we'll set one up for you.
 
