@@ -5,6 +5,10 @@
 
 Preview Slides: https://ladieslearningcode.github.io/llc-intro-to-ai-master/slides.html
 
+## Special Note for Instructors
+
+The dataiku platform will need to be activated ahead of time. If you haven't received a custom bitly link via email already, please let us know at content@canadalearningcode.ca and we'll set one up for you.
+
 ## Attributions
 Content created by [Parinaz Sobhani](https://georgianpartners.com/team_member/parinaz-sobhani/) for Canada Learning Code.
 
